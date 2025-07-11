@@ -494,7 +494,7 @@ body {
     color: #323232; /* Semantika: Tamno siva boja teksta; Sintaksa: CSS svojstvo */
     padding: 5px; /* Semantika: Unutrašnji razmak; Sintaksa: CSS dimenzija */
     font-weight: 500; /* Semantika: Srednje podebljani tekst; Sintaksa: CSS svojstvo */
-    font-size: 20px; /* Semantika: NEDOVOLJNO: Nedostaje jedinica (px, em, itd.); Sintaksa: nepotpuno CSS svojstvo */
+    font-size: 20px; 
     text-align: left; /* Semantika: Poravnanje teksta ulevo; Sintaksa: CSS svojstvo */
 }
 
