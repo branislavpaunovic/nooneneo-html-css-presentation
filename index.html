@@ -39,328 +39,349 @@
     </head>  <!-- Zatvara head sekciju. -->
     <body> <!-- Start of body section -->
 
-        <div class="header">
-        <div class="column">
-            <div id="logo-i-social">
-                <div id="logo-holder">
-                    <a href="https://nooneneo.com">
-                        <img alt="NoOneNeo Logo" src="assets/pic/One Site Stand Alone Branislav (NoOneNeo) Paunovic.png"/>
+        <div class="header"> <!-- Glavni kontejner za zaglavlje stranice; semantički bolje koristiti <header>, ali <div> je često korišćen -->
+            <div class="column"> <!-- Strukturni kontejner, verovatno za raspored elemenata unutar headera -->
+                <div id="logo-i-social"> <!-- Kontejner koji obuhvata logo i društvene mreže -->
+                    <div id="logo-holder"> <!-- Kontejner za logo, olakšava stilizaciju i pozicioniranje -->
+                        <a href="https://nooneneo.com"> <!-- Link koji vodi na početnu stranicu -->
+                            <img alt="NoOneNeo Logo" src="assets/pic/One Site Stand Alone Branislav (NoOneNeo) Paunovic.png"/> <!-- Slika logotipa sa alt tekstom za pristupačnost -->
+                        </a>
+                    </div>
+                    <div id="social-holder"> <!-- Kontejner za ikonice društvenih mreža -->
+                        <a href="https://www.facebook.com/Nooneneo.vision/" target="_blank"> <!-- Link ka Facebook profilu, otvara se u novom tabu -->
+                            <img alt="Facebook" src="assets/pic/Facebook Branislav (NoOneNeo) Paunovic.png"/> <!-- Ikonica Facebook-a sa alt tekstom -->
+                        </a>
+                        <a href="https://www.instagram.com/nooneneo.vision/" target="_blank"> <!-- Link ka Instagram profilu -->
+                            <img alt="Instangram" src="assets/pic/Instangram Branislav (NoOneNeo) Paunovic.png"/> <!-- Ikonica Instagrama, postoji mala greška u alt tekstu: "Instangram" umesto "Instagram" -->
+                        </a>
+                        <a href="https://www.linkedin.com/in/branislav-paunovic-5ab79b302/" target="_blank"> <!-- Link ka LinkedIn profilu -->
+                            <img alt="Linkedin" src="assets/pic/linkedin Branislav (NoOneNeo) Paunovic.png"/> <!-- Ikonica LinkedIna -->
+                        </a>
+                        <a href="https://www.youtube.com/@nooneneo.vision/shorts" target="_blank"> <!-- Link ka YouTube kanalu -->
+                            <img alt="YouTube" src="assets/pic/YouTube Branislav (NoOneNeo) Paunovic.png"/> <!-- Ikonica YouTube-a -->
+                        </a>
+                    </div>
+                </div>
+                <nav id="main-menu"> <!-- Navigacioni meni sa ID-em za lakšu selekciju i stilizaciju -->
+                    <a class="active" href="#">Home</a> <!-- Aktivna stavka menija -->
+                    <a href="#o-nama">About</a> <!-- Link ka sekciji "O nama" na istoj stranici -->
+                    <a href="#usluge">Services</a> <!-- Link ka sekciji "Usluge" -->
+                    <a href="#proizvodi">Packages</a> <!-- Link ka sekciji "Paketi" -->
+                    <a href="#karijera">Career</a> <!-- Link ka sekciji "Karijera" -->
+                    <a href="#kontakt">Contact</a> <!-- Link ka sekciji "Kontakt" -->
+                </nav>
+            </div>
+        </div>
+
+        <div class="page" id="pocetna"> <!-- Glavni kontejner stranice ili sekcije; ID 'pocetna' koristi se za anchor linkove i jedinstvenu identifikaciju -->
+            <div class="column"> <!-- Strukturni kontejner za raspored i centriranje sadržaja -->
+                <h1>Full-Stack Developer, UX/UI &amp; 3D Designer.</h1> <!-- Glavni naslov stranice; koristi se &amp; za ampersand, semantički ispravno -->
+                <div class="dark-box"> <!-- Vizuelni kontejner sa tamnijom pozadinom za isticanje teksta -->
+                    <p>I build meaningful digital experiences–from custom WordPress websites and modern web apps to immersive UX/UI designs and cinematic 3D visuals.</p> <!-- Paragraf koji predstavlja kratak opis i vrednosti rada -->
+                    <p>I don’t just build websites – I build experiences that leave a mark. With a sharp eye for design, solid full-stack dev skills, and a passion for storytelling through code and 3D visuals – I turn ideas into bold digital realities. Born in Belgrade. Creating for the world. I work solo. I work smart. I work like it’s personal – because it is. This isn’t just work. It’s my comeback. Let’s build something unforgettable.</p> <!-- Detaljniji opis lične filozofije i pristupa radu, motivacioni ton -->
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="o-nama"> <!-- Sekcija stranice sa informacijama o meni; ID 'o-nama' koristi se za navigaciju -->
+            <div class="column"> <!-- Kontejner za vertikalno poravnavanje i raspored sadržaja -->
+                <h2>About</h2> <!-- Sekundarni naslov sekcije -->
+                <br/><br/> 
+                <p class="align-center" style="text-transform: uppercase"> Building the future with technologies that power the world.</p> <!-- Centrirani paragraf sa velikim slovima preko inline stila -->
+                <br/> <br/> 
+                <div class="krugovi"> <!-- Kontejner za kružne statistike ili istaknute brojke -->
+                    <div class="krug-holder"> <!-- Kontejner za jedan krug sa brojkom i opisom -->
+                        <div class="krug">11</div> <!-- Broj zaposlenih -->
+                        <div class="oznaka">Employees</div> <!-- Opis broja -->
+                    </div>
+                    <div class="krug-holder">
+                        <div class="krug">31</div> <!-- Broj projekata -->
+                        <div class="oznaka">Project</div> <!-- Ovde bi trebalo da piše 'Projects' u množini -->
+                    </div>
+                    <div class="krug-holder">
+                        <div class="krug">17</div> <!-- Broj partnera -->
+                        <div class="oznaka">Partners</div> 
+                    </div>
+                </div>
+                <p class="align-center"> Fueled by vision. Crafted by skill. I am NoOneNeo.</p> <!-- Još jedan centrirani paragraf motivacione prirode -->
+                <div class="technologies"> <!-- Kontejner za prikaz tehnologija -->
+                    <div class="tehnologija"> <!-- Jedan element tehnologije -->
+                        <img alt="HTML5" src="assets/pic/html.png"/> <!-- Slika tehnologije sa alt tekstom -->
+                        <p>HTML 5</p> <!-- Naziv tehnologije -->
+                    </div>
+                    <div class="tehnologija"> <!-- Semantika: Kontejner za jednu tehnologiju; Sintaksa: ispravan div sa klasom -->
+                        <img alt="CSS3" src="assets/pic/css.png"/> <!-- Semantika: Slika koja predstavlja tehnologiju; Sintaksa: ispravan img tag sa alt atributom -->
+                        <p> CSS 3 </p> <!-- Semantika: Naziv tehnologije; Sintaksa: ispravan p tag -->
+                    </div> <!-- Semantika: Zatvaranje kontejnera tehnologije; Sintaksa: ispravan zatvarajući tag -->
+
+                    <div class="tehnologija"> <!-- Semantika: Kontejner za jednu tehnologiju; Sintaksa: ispravan div sa klasom -->
+                        <img alt="JavaScript" src="assets/pic/js.png"/> <!-- Semantika: Slika koja predstavlja tehnologiju; Sintaksa: ispravan img tag sa alt atributom -->
+                        <p> JavaScript </p> <!-- Semantika: Naziv tehnologije; Sintaksa: ispravan p tag -->
+                    </div> <!-- Semantika: Zatvaranje kontejnera tehnologije; Sintaksa: ispravan zatvarajući tag -->
+
+                    <div class="tehnologija"> <!-- Semantika: Kontejner za jednu tehnologiju; Sintaksa: ispravan div sa klasom -->
+                        <img alt="PHP" src="assets/pic/php.png"/>  <!-- Semantika: Slika koja predstavlja tehnologiju; Sintaksa: ispravan img tag sa alt atributom -->
+                        <p> PHP </p>  <!-- Semantika: Naziv tehnologije; Sintaksa: ispravan p tag -->
+                    </div> <!-- Semantika: Zatvaranje kontejnera tehnologije; Sintaksa: ispravan zatvarajući tag -->
+
+                    <div class="tehnologija"> <!-- Semantika: Kontejner za jednu tehnologiju; Sintaksa: ispravan div sa klasom -->
+                        <img alt="MySql" src="assets/pic/mysql.png"/> <!-- Semantika: Slika koja predstavlja tehnologiju; Sintaksa: ispravan img tag sa alt atributom -->
+                        <p> MySQL </p> <!-- Semantika: Naziv tehnologije; Sintaksa: ispravan p tag -->
+                    </div> <!-- Semantika: Zatvaranje kontejnera tehnologije; Sintaksa: ispravan zatvarajući tag -->
+
+                    <div class="tehnologija"> <!-- Semantika: Kontejner za jednu tehnologiju; Sintaksa: ispravan div sa klasom -->
+                        <img alt="WordPress" src="assets/pic/wordpress.png"/> <!-- Semantika: Slika koja predstavlja tehnologiju; Sintaksa: ispravan img tag sa alt atributom -->
+                        <p> WordPress </p>  <!-- Semantika: Naziv tehnologije; Sintaksa: ispravan p tag -->
+                    </div> <!-- Semantika: Zatvaranje kontejnera tehnologije; Sintaksa: ispravan zatvarajući tag -->
+
+                    <div class="tehnologija"> <!-- Semantika: Kontejner za jednu tehnologiju; Sintaksa: ispravan div sa klasom -->
+                        <img alt="Autodesk" src="assets/pic/autodesk.png"/> <!-- Semantika: Slika koja predstavlja tehnologiju; Sintaksa: ispravan img tag sa alt atributom -->
+                        <p> Autodesk </p> <!-- Semantika: Naziv tehnologije; Sintaksa: ispravan p tag -->
+                    </div> <!-- Semantika: Zatvaranje kontejnera tehnologije; Sintaksa: ispravan zatvarajući tag -->
+
+                </div> <!-- Semantika: Zatvaranje roditeljskog kontejnera; Sintaksa: ispravan zatvarajući tag -->
+            </div> <!-- Semantika: Zatvaranje kolone; Sintaksa: ispravan zatvarajući tag -->
+        </div> <!-- Semantika: Zatvaranje glavne stranice ili sekcije; Sintaksa: ispravan zatvarajući tag -->
+
+
+
+        <div class="page" id="usluge"> <!-- Semantika: Glavna sekcija za usluge; Sintaksa: ispravan div sa ID i klasom -->
+            <div class="column"> <!-- Semantika: Kontejner za organizaciju sadržaja u kolone; Sintaksa: ispravan div sa klasom -->
+                <h2>Services</h2> <!-- Semantika: Naslov sekcije; Sintaksa: ispravan h2 tag -->
+                <br/> <br/> <!-- Semantika: Vizuelni razmak; Sintaksa: ispravan self-closing tag -->
+                <p class="align-center"> It Services that we provide.</p> <!-- Semantika: Paragraf koji uvodi usluge; Sintaksa: ispravan p tag sa klasom -->
+                <br/> <br/> <!-- Semantika: Vizuelni razmak; Sintaksa: ispravan self-closing tag -->
+                <div class="service-row"> <!-- Semantika: Red sa uslugama; Sintaksa: ispravan div sa klasom -->
+                    <div> <!-- Semantika: Kontejner pojedinačne usluge; Sintaksa: ispravan div -->
+                        <img alt="UX/UI &amp; Front End Development" src="assets/pic/FrontEnd.jpg"/> <!-- Semantika: Slika usluge; Sintaksa: ispravan img tag sa alt atributom -->
+                        <p>UX/UI &amp; Front End Development</p> <!-- Semantika: Naziv usluge; Sintaksa: ispravan p tag -->
+                    </div>
+                    <div> <!-- Semantika: Kontejner pojedinačne usluge; Sintaksa: ispravan div -->
+                        <img alt="BackEnd Tech,Php &amp; MySQL" src="assets/pic/BackEnd.jpg"/> <!-- Semantika: Slika usluge; Sintaksa: ispravan img tag sa alt atributom -->
+                        <p>BackEnd Tech, Php &amp; MySQL</p> <!-- Semantika: Naziv usluge; Sintaksa: ispravan p tag -->
+                    </div>
+                    <div> <!-- Semantika: Kontejner pojedinačne usluge; Sintaksa: ispravan div -->
+                        <img alt="ull Stack Custom Development" src="assets/pic/FullStack.jpg"/> <!-- Semantika: Slika usluge; Sintaksa: ispravan img tag sa alt atributom -->
+                        <p>Full Stack Custom Development</p> <!-- Semantika: Naziv usluge; Sintaksa: ispravan p tag -->
+                    </div>
+                </div>
+                <div class="service-row"> <!-- Semantika: Drugi red usluga; Sintaksa: ispravan div sa klasom -->
+                    <div> <!-- Semantika: Kontejner pojedinačne usluge; Sintaksa: ispravan div -->
+                        <img alt="3D Design with Autodesk tools" src="assets/pic/3DDesign.jpg"/> <!-- Semantika: Slika usluge; Sintaksa: ispravan img tag sa alt atributom -->
+                        <p>3D Design with Autodesk tools</p> <!-- Semantika: Naziv usluge; Sintaksa: ispravan p tag -->
+                    </div>
+                    <div> <!-- Semantika: Kontejner reference sa slikom i linkom; Sintaksa: ispravan div -->
+                        <img alt="Our references NutriPlAin" src="assets/pic/NutriPlAIn.jpg"/> <!-- Semantika: Slika reference; Sintaksa: ispravan img tag sa alt atributom -->
+                        <a href="https:nutriplain.com">Our references NutriPlAin</a> <!-- Semantika: Link ka stranici reference; Sintaksa: ispravan a tag, ali nedostaje '//' u URL -->
+                    </div>
+                    <div> <!-- Semantika: Kontejner reference sa slikom i linkom; Sintaksa: ispravan div -->
+                        <img alt="Our references AngelsTouch" src="assets/pic/AngelsTouch.jpg"/> <!-- Semantika: Slika reference; Sintaksa: ispravan img tag sa alt atributom -->
+                        <a href="https://AngelsTouch.rs">Our references AngelsTouch</a> <!-- Semantika: Link ka stranici reference; Sintaksa: ispravan a tag sa validnim URL -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="page" id="proizvodi"> <!-- Semantika: Glavna sekcija za prikaz proizvoda/paketa; Sintaksa: ispravan div sa ID i klasom -->  
+            <div class="column"> <!-- Semantika: Kontejner za raspored elemenata vertikalno; Sintaksa: ispravan div sa klasom -->  
+                <h2> Packages </h2> <!-- Semantika: Naslov sekcije; Sintaksa: ispravan h2 tag -->  
+                <div class="matrica"> <!-- Semantika: Kontejner mreže proizvoda; Sintaksa: ispravan div sa klasom -->  
+                    <div class="proizvod" id="proizvod-a1"> <!-- Semantika: Jedan proizvod ili paket; Sintaksa: ispravan div sa klasom i ID -->  
+                        <img alt="Osnovni Paket Full Stack" src="assets/pic/Basic.jpg"/> <!-- Semantika: Slika proizvoda sa opisom u alt atributu; Sintaksa: ispravan img tag -->  
+                        <div class="text-holder"> <!-- Semantika: Kontejner za tekstualni sadržaj proizvoda; Sintaksa: ispravan div sa klasom -->  
+                            <span>Basic Full Stack Package</span> <!-- Semantika: Naziv proizvoda; Sintaksa: ispravan span tag -->  
+                        </div> <!-- Semantika: Kraj kontejnera za tekst; Sintaksa: ispravan zatvarajući tag -->  
+                    </div> <!-- Semantika: Kraj jednog proizvoda; Sintaksa: ispravan zatvarajući tag -->  
+                    <div class="proizvod" id="proizvod-b2"> <!-- Semantika: Drugi proizvod; Sintaksa: ispravan div sa klasom i ID -->  
+                        <img alt="Poslovni Paket Full Stack" src="assets/pic/Business.jpg"/> <!-- Semantika: Slika proizvoda sa alt tekstom; Sintaksa: ispravan img tag -->  
+                        <div class="text-holder"> <!-- Semantika: Kontejner za tekst proizvoda; Sintaksa: ispravan div -->  
+                            <span>Business Full Stack Package</span> <!-- Semantika: Naziv proizvoda; Sintaksa: ispravan span tag -->  
+                        </div> <!-- Semantika: Kraj tekst kontejnera; Sintaksa: ispravan zatvarajući tag -->  
+                    </div> <!-- Semantika: Kraj proizvoda; Sintaksa: ispravan zatvarajući tag -->  
+                    <div class="proizvod" id="proizvod-c3"> <!-- Semantika: Treći proizvod; Sintaksa: ispravan div sa klasom i ID -->  
+                        <img alt="Pro Paket Full Stack" src="assets/pic/Pro.jpg"/> <!-- Semantika: Slika proizvoda sa opisom; Sintaksa: ispravan img tag -->  
+                        <div class="text-holder"> <!-- Semantika: Kontejner za tekstualni opis; Sintaksa: ispravan div -->  
+                            <span>Pro Package</span> <!-- Semantika: Naziv proizvoda; Sintaksa: ispravan span tag -->  
+                        </div> <!-- Semantika: Kraj tekst kontejnera; Sintaksa: ispravan zatvarajući tag -->  
+                    </div> <!-- Semantika: Kraj proizvoda; Sintaksa: ispravan zatvarajući tag -->  
+                    <div class="proizvod" id="proizvod-d4"> <!-- Semantika: Četvrti proizvod; Sintaksa: ispravan div sa klasom i ID -->  
+                        <img alt="Visejezicni sajtovi" src="assets/pic/English.jpg"/> <!-- Semantika: Slika proizvoda; Sintaksa: ispravan img tag -->  
+                        <div class="text-holder"> <!-- Semantika: Kontejner za tekst; Sintaksa: ispravan div -->  
+                            <span>Multilingual Websites</span> <!-- Semantika: Naziv proizvoda; Sintaksa: ispravan span tag -->  
+                        </div> <!-- Semantika: Kraj tekst kontejnera; Sintaksa: ispravan zatvarajući tag -->  
+                    </div> <!-- Semantika: Kraj proizvoda; Sintaksa: ispravan zatvarajući tag -->  
+                    <div class="proizvod" id="proizvod-e5"> <!-- Semantika: Peti proizvod; Sintaksa: ispravan div sa klasom i ID -->  
+                        <img alt="Senior Developer" src="assets/pic/Programer.jpg"/> <!-- Semantika: Slika proizvoda; Sintaksa: ispravan img tag -->  
+                        <div class="text-holder"> <!-- Semantika: Kontejner za tekst; Sintaksa: ispravan div -->  
+                            <span>Senior Developer</span> <!-- Semantika: Naziv proizvoda; Sintaksa: ispravan span tag -->  
+                        </div> <!-- Semantika: Kraj tekst kontejnera; Sintaksa: ispravan zatvarajući tag -->  
+                    </div> <!-- Semantika: Kraj proizvoda; Sintaksa: ispravan zatvarajući tag -->  
+                    <div class="proizvod" id="proizvod-f6"> <!-- Semantika: Šesti proizvod; Sintaksa: ispravan div sa klasom i ID -->  
+                        <img alt="Hosting Services" src="assets/pic/Serveri.jpg"/> <!-- Semantika: Slika proizvoda; Sintaksa: ispravan img tag -->  
+                        <div class="text-holder"> <!-- Semantika: Kontejner za tekst; Sintaksa: ispravan div -->  
+                            <span>Hosting Services</span> <!-- Semantika: Naziv proizvoda; Sintaksa: ispravan span tag -->  
+                        </div> <!-- Semantika: Kraj tekst kontejnera; Sintaksa: ispravan zatvarajući tag -->  
+                    </div> <!-- Semantika: Kraj proizvoda; Sintaksa: ispravan zatvarajući tag -->  
+                    <div class="proizvod" id="proizvod-g7"> <!-- Semantika: Sedmi proizvod; Sintaksa: ispravan div sa klasom i ID -->  
+                        <img alt="ER Modeling NaviCat" src="assets/pic/poslovni.png"/> <!-- Semantika: Slika proizvoda; Sintaksa: ispravan img tag -->  
+                        <div class="text-holder"> <!-- Semantika: Kontejner za tekst; Sintaksa: ispravan div -->  
+                            <span>ER Modeling NaviCat</span> <!-- Semantika: Naziv proizvoda; Sintaksa: ispravan span tag -->  
+                        </div> <!-- Semantika: Kraj tekst kontejnera; Sintaksa: ispravan zatvarajući tag -->  
+                    </div> <!-- Semantika: Kraj proizvoda; Sintaksa: ispravan zatvarajući tag -->  
+                </div> <!-- Semantika: Kraj mreže proizvoda; Sintaksa: ispravan zatvarajući tag -->  
+            </div> <!-- Semantika: Kraj kolone; Sintaksa: ispravan zatvarajući tag -->  
+        </div> <!-- Semantika: Kraj sekcije proizvoda; Sintaksa: ispravan zatvarajući tag -->
+
+        <div class="page" id="karijera"> <!-- Semantika: Glavna sekcija za karijerne opcije; Sintaksa: ispravan div sa ID i klasom -->  
+            <div class="column"> <!-- Semantika: Kontejner za vertikalni raspored sadržaja; Sintaksa: ispravan div sa klasom -->  
+                <h2>Career</h2> <!-- Semantika: Naslov sekcije karijere; Sintaksa: ispravan h2 tag -->  
+                <div class="career-columns"> <!-- Semantika: Kontejner za raspored kolona karijere; Sintaksa: ispravan div sa klasom -->  
+                    <div class="job-list"> <!-- Semantika: Lista poslova ili opcija za odabir; Sintaksa: ispravan div sa klasom -->  
+                        <label for="j1">Software Architect</label> <!-- Semantika: Oznaka za radio dugme, povezana sa input id 'j1'; Sintaksa: ispravan label tag -->  
+                        <label for="j2">UX/UI Designer</label> <!-- Semantika: Labela za UX/UI Designer; Sintaksa: ispravan label tag -->  
+                        <label for="j3">Front-end Developer</label> <!-- Semantika: Labela za Front-end Developer; Sintaksa: ispravan label tag -->  
+                        <label for="j4">Back-end Developer</label> <!-- Semantika: Labela za Back-end Developer; Sintaksa: ispravan label tag -->  
+                        <label for="j5">DevOps Engineer</label> <!-- Semantika: Labela za DevOps Engineer; Sintaksa: ispravan label tag -->  
+                    </div> <!-- Semantika: Kraj liste poslova; Sintaksa: ispravan zatvarajući tag -->  
+                    <div class="job-descriptions"> <!-- Semantika: Kontejner za opise poslova; Sintaksa: ispravan div sa klasom -->  
+                        <input checked="" id="j1" name="job-item" type="radio" value="1"/> <!-- Semantika: Radio dugme za izbor prve opcije; Sintaksa: ispravan input tipa radio sa atributima -->  
+                        <div class="job-opis"> <!-- Semantika: Kontejner za opis posla; Sintaksa: ispravan div sa klasom -->  
+                            <h3 style="font-weight: 700">Software Architect</h3> <!-- Semantika: Naslov opisa posla; Sintaksa: ispravan h3 tag sa inline stilom -->  
+                            <p>Designing a complete system from scratch, including database structure, relational connections, and data flow throughout the application.</p> <!-- Semantika: Paragraf sa opisom odgovornosti; Sintaksa: ispravan p tag -->  
+                            <p>Creating ER diagrams, defining API structure and backend architecture. Establishing technical standards, system modularization, and preparing technical documentation.</p> <!-- Semantika: Dodatni opis; Sintaksa: ispravan p tag -->  
+                            <p>Elaborating security aspects, performance, and scalability. Coordinating with front-end and back-end teams throughout all development stages.</p> <!-- Semantika: Još detalja; Sintaksa: ispravan p tag -->  
+                            <ul> <!-- Semantika: Lista ključnih veština i zadataka; Sintaksa: ispravan ul tag -->  
+                                <li>System Logic Design</li> <!-- Semantika: Stavka liste; Sintaksa: ispravan li tag -->  
+                                <li>Database Modeling</li>  
+                                <li>Defining API Structure</li>  
+                                <li>Technical Documentation</li>  
+                                <li>Team Coordination</li>  
+                            </ul>  
+                            <p>High salary, you make all the key decisions, your voice matters, you’re rarely replaced, and you are highly respected.</p> <!-- Semantika: Završni paragraf sa benefitima; Sintaksa: ispravan p tag -->  
+                        </div> <!-- Semantika: Kraj opisa posla; Sintaksa: ispravan zatvarajući tag -->  
+
+                        <input id="j2" name="job-item" type="radio" value="2"/> <!-- Semantika: Radio dugme za izbor UX/UI dizajnera; Sintaksa: ispravan input tipa radio sa ID, name i value atributima -->
+                        <div class="job-opis"> <!-- Semantika: Kontejner za opis posla UX/UI dizajnera; Sintaksa: ispravan div sa klasom -->
+                            <h3 style="font-weight: 700">UX/UI Designer</h3> <!-- Semantika: Naslov opisa posla; Sintaksa: ispravan h3 tag sa inline stilom -->
+                            <p>Designing user experience and interface with a focus on intuitive navigation, responsiveness, and visual aesthetics.</p> <!-- Semantika: Paragraf sa opisom rada; Sintaksa: ispravan p tag -->
+                            <p>Creating wireframes, prototypes, and design systems using tools like Figma and Adobe XD.</p> <!-- Semantika: Paragraf sa dodatnim opisom; Sintaksa: ispravan p tag -->
+                            <p>Creating user flows, testing prototypes, and implementing feedback to improve conversion rates and user satisfaction. Collaborating with teams to ensure the technical feasibility of the design.</p> <!-- Semantika: Detaljan opis aktivnosti; Sintaksa: ispravan p tag -->
+                            <ul> <!-- Semantika: Lista ključnih veština; Sintaksa: ispravan ul tag -->
+                                <li>Creating wireframes</li> <!-- Semantika: Stavka liste; Sintaksa: ispravan li tag -->
+                                <li>Prototyping in Figma</li>
+                                <li>User Flow Design</li>
+                                <li>User Experience Testing</li>
+                                <li>Collaboration with Developers</li>
+                            </ul>
+                            <p>Creative work, fast results, visible impact, relaxed pace, high-demand profession.</p> <!-- Semantika: Završni paragraf o prednostima posla; Sintaksa: ispravan p tag -->
+                        </div> <!-- Semantika: Kraj opisa posla; Sintaksa: ispravan zatvarajući tag -->
+
+                        <input id="j3" name="job-item" type="radio" value="3"/> <!-- Semantika: Radio dugme za izbor Front-end developera; Sintaksa: ispravan input tipa radio sa atributima -->
+                        <div class="job-opis"> <!-- Semantika: Kontejner za opis Front-end developera; Sintaksa: ispravan div sa klasom -->
+                            <h3 style="font-weight: 700">Front-end Developer</h3> <!-- Semantika: Naslov opisa posla; Sintaksa: ispravan h3 tag sa inline stilom -->
+                            <p>Implementing design into functional components using HTML, CSS, JavaScript, and modern front-end frameworks (React, Vue).</p> <!-- Semantika: Paragraf sa opisom rada; Sintaksa: ispravan p tag -->
+                            <p>Connecting with the backend via REST API, displaying and manipulating data.</p> <!-- Semantika: Paragraf sa dodatnim opisom; Sintaksa: ispravan p tag -->
+                            <p>Developing a responsive and accessible user interface optimized for all devices, with a focus on user interaction, SEO, and display performance.</p> <!-- Semantika: Detaljan opis aktivnosti; Sintaksa: ispravan p tag -->
+                            <ul> <!-- Semantika: Lista ključnih veština; Sintaksa: ispravan ul tag -->
+                                <li>HTML/CSS/JavaScript Coding</li> <!-- Semantika: Stavka liste; Sintaksa: ispravan li tag -->
+                                <li>Responsive Design</li>
+                                <li>API Integration</li>
+                                <li>Display Optimization</li>
+                                <li>UX Improvements</li>
+                            </ul>
+                            <p>In high demand everywhere, quick visible results, a good balance between design and code, flexible work.</p> <!-- Semantika: Završni paragraf o prednostima posla; Sintaksa: ispravan p tag -->
+                        </div> <!-- Semantika: Kraj opisa posla; Sintaksa: ispravan zatvarajući tag -->
+
+                        <input id="j4" name="job-item" type="radio" value="4"/> <!-- Semantika: Radio dugme za izbor Back-end developera; Sintaksa: ispravan input tipa radio sa atributima -->
+                        <div class="job-opis"> <!-- Semantika: Kontejner za opis Back-end developera; Sintaksa: ispravan div sa klasom -->
+                            <h3 style="font-weight: 700">Back-end Developer</h3> <!-- Semantika: Naslov opisa posla; Sintaksa: ispravan h3 tag sa inline stilom -->
+                            <p>Building server-side logic, creating and maintaining databases, as well as developing and documenting APIs.</p> <!-- Semantika: Paragraf sa opisom zadataka; Sintaksa: ispravan p tag -->
+                            <p>Managing user authentication, data processing, sessions, and application security aspects.</p> <!-- Semantika: Paragraf sa dodatnim opisom; Sintaksa: ispravan p tag -->
+                            <p>SQL query optimization and scalable backend architecture development. Integration with the front-end and implementation of business rules and logic.</p> <!-- Semantika: Detaljan opis aktivnosti; Sintaksa: ispravan p tag -->
+                            <ul> <!-- Semantika: Lista ključnih veština; Sintaksa: ispravan ul tag -->
+                                <li>Server-side Logic Development</li> <!-- Semantika: Stavka liste; Sintaksa: ispravan li tag -->
+                                <li>Database Management</li>
+                                <li>API Implementation</li>
+                                <li>User Authentication</li>
+                                <li>Data Processing</li>
+                            </ul>
+                            <p>High demand, behind-the-scenes work without clients, strong salary, stable job.</p> <!-- Semantika: Završni paragraf o prednostima posla; Sintaksa: ispravan p tag -->
+                        </div> <!-- Semantika: Kraj opisa posla; Sintaksa: ispravan zatvarajući tag -->
+
+                        <input id="j5" name="job-item" type="radio" value="5"/> <!-- Semantika: Radio dugme za izbor DevOps inženjera; Sintaksa: ispravan input tipa radio sa atributima -->
+                        <div class="job-opis"> <!-- Semantika: Kontejner za opis DevOps pozicije; Sintaksa: ispravan div sa klasom -->
+                            <h3 style="font-weight: 700">DevOps Engineer</h3> <!-- Semantika: Naslov opisa pozicije; Sintaksa: ispravan h3 tag sa inline stilom -->
+                            <p>Configuration and maintenance of server infrastructure, including deployment processes, hosting environments, and task automation.</p> <!-- Semantika: Paragraf sa opisom odgovornosti; Sintaksa: ispravan p tag -->
+                            <p>Setup and maintenance of SSL certificates, CDN solutions, monitoring systems, and backup strategies.</p> <!-- Semantika: Paragraf sa dodatnim opisom; Sintaksa: ispravan p tag -->
+                            <p>Managing platform availability, performance, and security. Implementing CI/CD pipelines and resolving real-time issues.</p> <!-- Semantika: Detaljan opis zadataka; Sintaksa: ispravan p tag -->
+                            <ul> <!-- Semantika: Lista ključnih veština; Sintaksa: ispravan ul tag -->
+                                <li>Server Configuration</li> <!-- Semantika: Stavka liste; Sintaksa: ispravan li tag -->
+                                <li>Deployment Automation</li>
+                                <li>System Monitoring</li>
+                                <li>Backup i sigurnost</li> <!-- Semantika: Stavka liste; Sintaksa: ispravan li tag, možeš prevesti i na engleski ako želiš -->
+                                <li>CI/CD Integration</li>
+                            </ul>
+                            <p>Top remote position, high salary, low competition, everything passes through your hands.</p> <!-- Semantika: Završni paragraf sa benefitima; Sintaksa: ispravan p tag -->
+                        </div> <!-- Semantika: Kraj opisa pozicije; Sintaksa: ispravan zatvarajući tag -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page"> <!-- Semantika: Glavna sekcija za kontakt informacije; Sintaksa: ispravan div sa klasom -->
+            <div class="column" id="kontakt"> <!-- Semantika: Kontejner kolone sa jedinstvenim ID za navigaciju; Sintaksa: ispravan div sa klasom i ID -->
+                <h2>Contact</h2> <!-- Semantika: Naslov sekcije; Sintaksa: ispravan h2 tag -->
+                <div class="kontak-region"> <!-- Semantika: Kontejner za region sa kontakt informacijama; Sintaksa: ispravan div sa klasom -->
+                    <div class="kontakt-adrese"> <!-- Semantika: Kontejner za adrese kontakta; Sintaksa: ispravan div sa klasom -->
+                        <strong>Beograd</strong> <br/> <!-- Semantika: Istaknut naziv grada; Sintaksa: ispravan strong tag i self-closing br tag -->
+                        Mirijevski Bulevar 4 <br/> <!-- Semantika: Ulica; Sintaksa: tekst i br tag -->
+                        11060, Palilula, Beograd <br/> <!-- Semantika: Poštanski broj i opština; Sintaksa: tekst i br -->
+                        Srbija <br/><br/> <!-- Semantika: Država; Sintaksa: tekst i dva br taga za razmak -->
+                        <strong>Sokobanja</strong> <br/> <!-- Semantika: Drugi grad; Sintaksa: strong i br -->
+                        Alekse Markesica 32 <br/> <!-- Semantika: Ulica; Sintaksa: tekst i br -->
+                        18230, Sokobanja <br/> <!-- Semantika: Poštanski broj i grad; Sintaksa: tekst i br -->
+                        Srbija <br/><br/> <!-- Semantika: Država; Sintaksa: tekst i dva br taga -->
+                        <strong>Aranđelovac</strong> <br/> <!-- Semantika: Treći grad; Sintaksa: strong i br -->
+                        Kneza Mihaila 110<br/> <!-- Semantika: Ulica; Sintaksa: tekst i br -->
+                        34300, Aranđelovac <br/> <!-- Semantika: Poštanski broj i grad; Sintaksa: tekst i br -->
+                        Srbija <!-- Semantika: Država; Sintaksa: tekst -->
+                    </div>
+                    <div class="kontakt-mailovi"> <!-- Semantika: Kontejner za email adrese; Sintaksa: ispravan div sa klasom -->
+                        <strong>Support</strong> <br/> <!-- Semantika: Sekcija podrške; Sintaksa: strong i br -->
+                        <a href="mailto:podrska@nooneneo.com">info@nooneneo.com</a> <br/> <!-- Semantika: Email link; Sintaksa: ispravan a tag sa mailto -->
+                        <strong>Sales</strong> <br/> <!-- Semantika: Sekcija prodaje; Sintaksa: strong i br -->
+                        <a href="mailto:prodaja@nooneneo.com">nooneneo.vision@gmail.com</a> <br/> <!-- Semantika: Email link; Sintaksa: a tag sa mailto -->
+                        <strong>Marketing</strong> <br/> <!-- Semantika: Sekcija marketinga; Sintaksa: strong i br -->
+                        <a href="mailto:marketing@noooneneo.com">marketing@noooneneo.com</a> <br/> <!-- Semantika: Email link; Sintaksa: a tag sa mailto -->
+                        <strong>Job</strong> <br/> <!-- Semantika: Sekcija poslova; Sintaksa: strong i br -->
+                        <a href="mailto:posao@noooneneo.com">posao@noooneneo.com</a> <!-- Semantika: Email link; Sintaksa: a tag sa mailto -->
+                    </div>
+                    <iframe class="kontakt-mapa" height="450" src="https://www.openstreetmap.org/export/embed.html?bbox=20.517879724502567%2C44.8150584927793%2C20.521420240402225%2C44.81676711023849&amp;layer=mapnik&amp;marker=44.81591280783718%2C20.519649982452393" style="border: 3px solid #ededed" width="700"> </iframe> <!-- Semantika: Ugrađeni prikaz mape sa OpenStreetMap; Sintaksa: ispravan iframe tag sa atributima -->
+                </div>
+            </div>
+        </div>
+
+        <div class="footer"> <!-- Semantika: Footer sekcija stranice; Sintaksa: ispravan div sa klasom -->
+            <div class="column"> <!-- Semantika: Kontejner za vertikalni raspored elemenata u footeru; Sintaksa: ispravan div sa klasom -->
+                <div class="footer-column align-left"> <!-- Semantika: Kolona sa adresom, poravnanje levo; Sintaksa: ispravan div sa klasama -->
+                    <strong>Beograd</strong> <br/> <!-- Semantika: Istaknuto ime grada; Sintaksa: ispravan strong i self-closing br -->
+                    Mirijevski Bulevar 4 <br/> <!-- Semantika: Ulica; Sintaksa: tekst i br -->
+                    11060, Palilula, Beograd <br/> <!-- Semantika: Poštanski broj i opština; Sintaksa: tekst i br -->
+                    Srbija <br/><br/> <!-- Semantika: Država; Sintaksa: tekst i dva br taga za razmak -->
+                </div>
+                <div class="footer-column align-center"> <!-- Semantika: Centralna kolona sa logoom; Sintaksa: ispravan div sa klasama -->
+                    <a href="https://nooneneo.com"> <!-- Semantika: Link na početnu stranicu; Sintaksa: ispravan a tag -->
+                        <img alt="NoOneNeo Logo" src="assets/pic/NoOneNeo.jpg"/> <!-- Semantika: Logo sa alt tekstom; Sintaksa: ispravan img tag -->
                     </a>
                 </div>
-                <div id="social-holder">
-                    <a href="https://www.facebook.com/Nooneneo.vision/" target="_blank">
-                    <img alt="Facebook" src="assets/pic/Facebook Branislav (NoOneNeo) Paunovic.png"/> </a>
-                    <a href="https://www.instagram.com/nooneneo.vision/" target="_blank">
-                    <img alt="Instangram" src="assets/pic/Instangram Branislav (NoOneNeo) Paunovic.png"/> </a>
-                    <a href="https://www.linkedin.com/in/branislav-paunovic-5ab79b302/" target="_blank">
-                    <img alt="Linkedin" src="assets/pic/linkedin Branislav (NoOneNeo) Paunovic.png"/></a>
-                    <a href="https://www.youtube.com/@nooneneo.vision/shorts" target="_blank">
-                    <img alt="YouTube" src="assets/pic/YouTube Branislav (NoOneNeo) Paunovic.png"/></a>
-                </div>
-            </div>
-            <nav id="main-menu">
-                <a class="active" href="#">Home</a>
-                <a href="#o-nama">About</a>
-                <a href="#usluge">Services</a>
-                <a href="#proizvodi">Packages</a>
-                <a href="#karijera">Career</a>
-                <a href="#kontakt">Contact</a>
-            </nav>
-        </div>
-    </div>
-
-    <div class="page" id="pocetna">
-        <div class="column">
-            <h1>Full-Stack Developer, UX/UI &amp; 3D Designer.</h1>
-            <div class="dark-box">
-                <p>I build meaningful digital experiences–from custom WordPress websites and modern web apps to immersive UX/UI designs and cinematic 3D visuals.</p>
-                <p>I don’t just build websites – I build experiences that leave a mark. With a sharp eye for design, solid full-stack dev skills, and a passion for storytelling through code and 3D visuals – I turn ideas into bold digital realities. Born in Belgrade. Creating for the world. I work solo. I work smart. I work like it’s personal – because it is. This isn’t just work. It’s my comeback. Let’s build something unforgettable.</p>
-            </div>
-        </div>
-    </div>
-    
-    <div class="page" id="o-nama">
-        <div class="column">
-            <h2>About</h2> <br/><br/>
-            <p class="align-center" style="text-transform: uppercase"> Building the future with technologies that power the world.</p> <br/> <br/>
-            <div class="krugovi">
-                <div class="krug-holder">
-                    <div class="krug">11</div>
-                    <div class="oznaka">Employees</div>
-                </div>
-                <div class="krug-holder">
-                    <div class="krug">31</div>
-                    <div class="oznaka">Project</div>
-                </div>
-                <div class="krug-holder">
-                    <div class="krug">17</div>
-                    <div class="oznaka">Partner</div>
-                </div>
-            </div>
-            <p class="align-center"> Fueled by vision. Crafted by skill. I am NoOneNeo.</p>
-            <div class="technologies">
-                <div class="tehnologija">
-                    <img alt="HTML5" src="assets/pic/html.png"/>
-                    <p>HTML 5</p>
-                </div>
-                <div class="tehnologija">
-                    <img alt="CSS3" src="assets/pic/css.png"/>
-                    <p> CSS 3 </p>
-                </div>
-                <div class="tehnologija">
-                    <img alt="JavaScript" src="assets/pic/js.png"/>
-                    <p> JavaScript </p>
-                </div>
-                <div class="tehnologija">
-                    <img alt="Php" src="assets/pic/php.png"/>
-                    <p> Php </p>
-                </div>
-                <div class="tehnologija">
-                    <img alt="MySql" src="assets/pic/mysql.png"/>
-                    <p> MySQL </p>
-                </div>
-                <div class="tehnologija">
-                    <img alt="WordPress" src="assets/pic/wordpress.png"/>
-                    <p> WorPress </p>
-                </div>
-                <div class="tehnologija">
-                    <img alt="Autodesk" src="assets/pic/autodesk.png"/>
-                    <p> Autodesk </p>
+                <div class="footer-column align-right"> <!-- Semantika: Desna kolona sa navigacionim linkovima; Sintaksa: ispravan div sa klasama -->
+                    <a href="#o-nama">About</a> <br/> <!-- Semantika: Link ka sekciji 'O nama'; Sintaksa: ispravan a tag i br -->
+                    <a href="#usluge">Services</a> <br/> <!-- Semantika: Link ka uslugama; Sintaksa: a tag i br -->
+                    <a href="#proizvodi">Packages</a> <br/> <!-- Semantika: Link ka paketima; Sintaksa: a tag i br -->
+                    <a href="#karijera">Career</a> <br/> <!-- Semantika: Link ka karijeri; Sintaksa: a tag i br -->
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="page" id="usluge">
-        <div class="column">
-            <h2>Services</h2> <br/> <br/>
-            <p class="align-center"> It Services that we provide.</p> <br/> <br/>
-            <div class="service-row">
-                <div>
-                    <img alt="UX/UI &amp; Front End Development" src="assets/pic/FrontEnd.jpg"/>
-                    <p>UX/UI &amp; Front End Development</p>
-                </div>
-                <div>
-                    <img alt="BackEnd Tech,Php &amp; MySQL" src="assets/pic/BackEnd.jpg"/>
-                    <p>BackEnd Tech, Php &amp; MySQL</p>
-                </div>
-                <div>
-                    <img alt="ull Stack Custom Development" src="assets/pic/FullStack.jpg"/>
-                    <p>Full Stack Custom Development</p>
-                </div>
-            </div>
-            <div class="service-row">
-                <div>
-                    <img alt="3D Design with Autodesk tools" src="assets/pic/3DDesign.jpg"/>
-                    <p>3D Design with Autodesk tools</p>
-                </div>
-                <div>
-                    <img alt="Our references NutriPlAin" src="assets/pic/NutriPlAIn.jpg"/>
-                    <a href="https:nutriplain.com">Our references NutriPlAin</a>
-                </div>
-                <div>
-                    <img alt="Our references AngelsTouch" src="assets/pic/AngelsTouch.jpg"/>
-                    <a href="https://AngelsTouch.rs">Our references AngelsTouch</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<div class="page" id="proizvodi">
-    <div class="column">
-        <h2> Packages </h2>
-        <div class="matrica">
-            <div class="proizvod" id="proizvod-a1">
-                <img alt="Osnovni Paket Full Stack" src="assets/pic/Basic.jpg"/>
-                <div class="text-holder">
-                    <span>Basic Full Stack Package</span>
-                </div>
-            </div>
-            <div class="proizvod" id="proizvod-b2">
-                <img alt="Poslovni Paket Full Stack" src="assets/pic/Business.jpg"/>
-                <div class="text-holder">
-                    <span>Business Full Stack Package</span>
-                </div>
-            </div>
-            <div class="proizvod" id="proizvod-c3">
-                <img alt="Pro Paket Full Stack" src="assets/pic/Pro.jpg"/>
-                <div class="text-holder">
-                    <span>Pro Package</span>
-                </div>
-            </div>
-            <div class="proizvod" id="proizvod-d4">
-                <img alt="Visejezicni sajtovi" src="assets/pic/English.jpg"/>
-                <div class="text-holder">
-                    <span>Multilingual Websites</span>
-                </div>
-            </div>
-            <div class="proizvod" id="proizvod-e5">
-                <img alt="Senior Developer" src="assets/pic/Programer.jpg"/>
-                <div class="text-holder">
-                    <span>Senior Developer</span>
-                </div>
-            </div>
-            <div class="proizvod" id="proizvod-f6">
-                <img alt="Hosting Services" src="assets/pic/Serveri.jpg"/>
-                <div class="text-holder">
-                    <span>Hosting Services</span>
-                </div>
-            </div>
-            <div class="proizvod" id="proizvod-g7">
-                <img alt="ER Modeling NaviCat" src="assets/pic/poslovni.png"/>
-                <div class="text-holder">
-                    <span>ER Modeling NaviCat</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-    <div class="page" id="karijera">
-        <div class="column">
-            <h2>Career</h2>
-            <div class="career-columns">
-                <div class="job-list">
-                    <label for="j1">Software Architect</label>
-                    <label for="j2">UX/UI Designer</label>
-                    <label for="j3">Front-end Developer</label>
-                    <label for="j4">Back-end Developer</label>
-                    <label for="j5">DevOps Engineer</label>
-                </div>
-                <div class="job-descriptions">
-                    <input checked="" id="j1" name="job-item" type="radio" value="1"/>
-                    <div class="job-opis">
-                        <h3 style="font-weight: 700">Software Architect</h3>
-                        <p>Designing a complete system from scratch, including database structure, relational connections, and data flow throughout the application.</p>
-                        <p>Creating ER diagrams, defining API structure and backend architecture. Establishing technical standards, system modularization, and preparing technical documentation.</p>
-                        <p>Elaborating security aspects, performance, and scalability. Coordinating with front-end and back-end teams throughout all development stages.</p>
-                        <ul>
-                            <li>System Logic Design</li>
-                            <li>Database Modeling</li>
-                            <li>Defining API Structure</li>
-                            <li>Technical Documentation</li>
-                            <li>Team Coordination</li>
-                        </ul>
-                        <p>High salary, you make all the key decisions, your voice matters, you’re rarely replaced, and you are highly respected.</p>
-                    </div>
-                    <input id="j2" name="job-item" type="radio" value="2"/>
-                    <div class="job-opis">
-                        <h3 style="font-weight: 700">UX/UI Designer</h3>
-                        <p>Designing user experience and interface with a focus on intuitive navigation, responsiveness, and visual aesthetics.</p>
-                        <p>Creating wireframes, prototypes, and design systems using tools like Figma and Adobe XD.</p>
-                        <p>Creating user flows, testing prototypes, and implementing feedback to improve conversion rates and user satisfaction. Collaborating with teams to ensure the technical feasibility of the design.</p>
-                        <ul>
-                            <li>Creating wireframes</li>
-                            <li>Prototyping in Figma</li>
-                            <li>User Flow Design</li>
-                            <li>User Experience Testing</li>
-                            <li>Collaboration with Developers</li>
-                        </ul>
-                        <p>Creative work, fast results, visible impact, relaxed pace, high-demand profession.</p>
-                    </div>
-                    <input id="j3" name="job-item" type="radio" value="3"/>
-                    <div class="job-opis">
-                        <h3 style="font-weight: 700">Front-end Developer</h3>
-                        <p>Implementing design into functional components using HTML, CSS, JavaScript, and modern front-end frameworks (React, Vue).</p>
-                        <p>Connecting with the backend via REST API, displaying and manipulating data.</p>
-                        <p>Developing a responsive and accessible user interface optimized for all devices, with a focus on user interaction, SEO, and display performance.</p>
-                        <ul>
-                            <li>HTML/CSS/JavaScript Coding</li>
-                            <li>Responsive Design</li>
-                            <li>API Integration</li>
-                            <li>Display Optimization</li>
-                            <li>UX Improvements</li>
-                        </ul>
-                        <p>In high demand everywhere, quick visible results, a good balance between design and code, flexible work.</p>
-                    </div>
-                    <input id="j4" name="job-item" type="radio" value="4"/>
-                    <div class="job-opis">
-                        <h3 style="font-weight: 700">Back-end Developer</h3>
-                        <p>Building server-side logic, creating and maintaining databases, as well as developing and documenting APIs.</p>
-                        <p>Managing user authentication, data processing, sessions, and application security aspects.</p>
-                        <p>SQL query optimization and scalable backend architecture development. Integration with the front-end and implementation of business rules and logic.</p>
-                        <ul>
-                            <li>Server-side Logic Development</li>
-                            <li>Database Management</li>
-                            <li>API Implementation</li>
-                            <li>User Authentication</li>
-                            <li>Data Processing</li>
-                        </ul>
-                        <p>High demand, behind-the-scenes work without clients, strong salary, stable job.</p>
-                    </div>
-                    <input id="j5" name="job-item" type="radio" value="5"/>
-                    <div class="job-opis">
-                        <h3 style="font-weight: 700">DevOps Engineer</h3>
-                        <p>Configuration and maintenance of server infrastructure, including deployment processes, hosting environments, and task automation.</p>
-                        <p>Setup and maintenance of SSL certificates, CDN solutions, monitoring systems, and backup strategies.</p>
-                        <p>Managing platform availability, performance, and security. Implementing CI/CD pipelines and resolving real-time issues.</p>
-                        <ul>
-                            <li>Server Configuration</li>
-                            <li>Deployment Automation</li>
-                            <li>System Monitoring</li>
-                            <li>Backup i sigurnost</li>
-                            <li>CI/CD Integration</li>
-                        </ul>
-                        <p>Top remote position, high salary, low competition, everything passes through your hands.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="page">
-        <div class="column" id="kontakt">
-            <h2>Contact</h2>
-            <div class="kontak-region">
-                <div class="kontakt-adrese">
-                    <strong>Beograd</strong> <br/>
-                                        Mirijevski Bulevar 4 <br/>
-                                        11060, Palilula, Beograd <br/>
-                                        Srbija <br/><br/>
-                    <strong>Sokobanja</strong> <br/>
-                                        Alekse Markesica 32 <br/>
-                                        18230, Sokobanja <br/>
-                                        Srbija <br/><br/>
-                    <strong>Aranđelovac</strong> <br/>
-                                        Kneza Mihaila 110<br/>
-                                        34300, Aranđelovac <br/>
-                                        Srbija
-                </div>
-                <div class="kontakt-mailovi">
-                    <strong>Support</strong> <br/>
-                        <a href="mailto:podrska@nooneneo.com">info@nooneneo.com</a> <br/>
-                    <strong>Sales</strong> <br/>
-                        <a href="mailto:prodaja@nooneneo.com">nooneneo.vision@gmail.com</a> <br/>
-                    <strong>Marketing</strong> <br/>
-                        <a href="mailto:marketing@noooneneo.com">marketing@noooneneo.com</a> <br/>
-                    <strong>Job</strong> <br/>
-                        <a href="mailto:posao@noooneneo.com">posao@noooneneo.com</a>
-                </div>
-                <iframe class="kontakt-mapa" height="450" src="https://www.openstreetmap.org/export/embed.html?bbox=20.517879724502567%2C44.8150584927793%2C20.521420240402225%2C44.81676711023849&amp;layer=mapnik&amp;marker=44.81591280783718%2C20.519649982452393" style="border: 3px solid #ededed" width="700"> </iframe>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <div class="column">
-        <div class="footer-column align-left">
-            <strong>Beograd</strong> <br/>
-                            Mirijevski Bulevar 4 <br/>
-                            11060, Palilula, Beograd <br/>
-                            Srbija <br/><br/>
-        </div>
-        <div class="footer-column align-center">
-            <a href="https://nooneneo.com">
-                <img alt="NoOneNeo Logo" src="assets/pic/NoOneNeo.jpg"/>
-            </a>
-        </div>
-        <div class="footer-column align-right">
-            <a href="#o-nama">About</a> <br/>
-            <a href="#usluge">Services</a> <br/>
-            <a href="#proizvodi">Packages</a> <br/>
-            <a href="#karijera">Career</a> <br/>
-        </div>
-        </div>
-    </div>
-</body>
-</html> 
+    </body> <!-- Semantika: Kraj tela dokumenta; Sintaksa: ispravan zatvarajući tag -->
+</html> <!-- Semantika: Kraj HTML dokumenta; Sintaksa: ispravan zatvarajući tag -->

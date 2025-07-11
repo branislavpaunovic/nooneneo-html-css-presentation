@@ -1,5 +1,5 @@
-html{
-    scroll-behavior: smooth;
+html { /* Semantika: Glavni HTML element; Sintaksa: selektor elementa */
+    scroll-behavior: smooth; /* Semantika: Omogućava glatko skrolovanje stranice; Sintaksa: CSS svojstvo i vrednost */
 }
 body {
     /*min-height: 100vh; /* Visina cele stranice – 100% visine vidljivog ekrana (viewport height) */
@@ -19,453 +19,519 @@ body {
     align-items:  center; /* vertikalno centriranje 
     flex-direction: column; */
 }
+
 .header {
     position: relative; /* Potrebno za ::before da zna gde je */
     z-index: 1; /* Da bi sadržaj bio iznad slike */
-    border-bottom: 3px solid #ededed;
-}    
-.header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../pic/Hero SLika.jpg");
-    background-size: cover;
-    background-position: center;
+    border-bottom: 3px solid #ededed; /* Semantika: Definiše donju ivicu elementa debljine 3px, stil čvrsta linija i svetlo siva boja; Sintaksa: CSS svojstvo sa tri vrednosti (debljina, stil, boja) */
+}
+
+.header::before { /* Semantika: Pseudo-element koji se ubacuje pre sadržaja elementa sa klasom .header; Sintaksa: selektor pseudo-elementa */
+    content: ""; /* Semantika: Potreban za prikaz pseudo-elementa, ovde prazan sadržaj; Sintaksa: CSS svojstvo content sa praznim stringom */
+    position: absolute; /* Semantika: Pozicionira element apsolutno u odnosu na najbliži pozicionirani roditelj; Sintaksa: CSS svojstvo sa vrednošću */
+    top: 0; /* Semantika: Postavlja element na vrh roditeljskog elementa; Sintaksa: CSS poziciona vrednost */
+    left: 0; /* Semantika: Postavlja element na levu ivicu roditeljskog elementa; Sintaksa: CSS poziciona vrednost */
+    width: 100%; /* Semantika: Širina pseudo-elementa zauzima punu širinu roditelja; Sintaksa: CSS dimenzijska vrednost */
+    height: 100%; /* Semantika: Visina pseudo-elementa zauzima punu visinu roditelja; Sintaksa: CSS dimenzijska vrednost */
+    background-image: url("../pic/Hero SLika.jpg"); /* Semantika: Postavlja pozadinsku sliku na pseudo-element; Sintaksa: CSS svojstvo sa URL vrednošću */
+    background-size: cover; /* Semantika: Skalira sliku da pokrije ceo element, uz održavanje proporcija; Sintaksa: CSS svojstvo sa vrednošću */
+    background-position: center; /* Semantika: Pozicionira sliku u centru elementa; Sintaksa: CSS svojstvo sa vrednošću */
     opacity: 0.2; /* Samo slika je providna */
     z-index: -1; /* Iza svega */
-}       
+}
+
 /* .page{ */
     /* border: 1px solid #ededed; */
 /* } */
+
 .footer {
     position: relative; /* Potrebno za ::before da zna gde je */
     z-index: 1; /* Da bi sadržaj bio iznad slike */
-    border-top: 3px solid #ededed;
+    border-top: 3px solid #ededed; /* Semantika: Definiše gornju ivicu elementa debljine 3px, stil čvrsta linija i svetlo siva boja; Sintaksa: CSS svojstvo sa tri vrednosti (debljina, stil, boja) */
 }    
-.footer::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../pic/Hero SLika.jpg");
-    background-size: cover;
-    background-position: center;
-    opacity: 0.2; /* Samo slika je providna */
-    z-index: -1; /* Iza svega */
+
+.footer::before { /* Semantika: Pseudo-element koji se prikazuje pre sadržaja elementa sa klasom .footer; Sintaksa: selektor pseudo-elementa */
+    content: ""; /* Semantika: Neophodan prazan sadržaj za prikaz pseudo-elementa; Sintaksa: CSS svojstvo content sa praznim stringom */
+    position: absolute; /* Semantika: Apsolutno pozicioniranje u odnosu na najbliži pozicionirani roditelj; Sintaksa: CSS svojstvo */
+    bottom: 0; /* Semantika: Postavlja pseudo-element na donju ivicu roditelja; Sintaksa: CSS poziciona vrednost */
+    left: 0; /* Semantika: Poravnanje levo unutar roditelja; Sintaksa: CSS poziciona vrednost */
+    width: 100%; /* Semantika: Puna širina roditeljskog elementa; Sintaksa: CSS dimenzijska vrednost */
+    height: 100%; /* Semantika: Puna visina roditeljskog elementa; Sintaksa: CSS dimenzijska vrednost */
+    background-image: url("../pic/Hero SLika.jpg"); /* Semantika: Pozadinska slika pseudo-elementa; Sintaksa: CSS svojstvo sa URL vrednošću */
+    background-size: cover; /* Semantika: Slika se skalira da pokrije ceo element; Sintaksa: CSS svojstvo */
+    background-position: center; /* Semantika: Slika je centrirana u elementu; Sintaksa: CSS svojstvo */
+    opacity: 0.2; /* Semantika: Smanjuje neprovidnost slike, pravi providan efekat; Sintaksa: CSS svojstvo sa decimalnom vrednošću */
+    z-index: -1; /* Semantika: Pseudo-element je pozicioniran iza drugih elemenata; Sintaksa: CSS svojstvo sa negativnom vrednošću */
 }
-.footer .column{
-    display: flex;        
+
+.footer .column { /* Semantika: Selektuje element sa klasom 'column' unutar '.footer' kontejnera; Sintaksa: složeni CSS selektor */
+    display: flex; /* Semantika: Aktivira flexbox layout za lakše poravnavanje i raspored decelementa; Sintaksa: CSS svojstvo sa vrednošću */
 }
-.footer .footer-column {
-    flex-grow: 1;
-    flex-basis: 0;
-    padding-top: 20px;
-    padding-bottom: 50px;
-} 
-.footer a {
-    text-decoration: none;
-    font-size: 18;
-    color: #ededed;
-    font-weight: 500;
+
+.footer .footer-column { /* Semantika: Selektuje elemente sa klasom 'footer-column' unutar '.footer'; Sintaksa: složeni CSS selektor */
+    flex-grow: 1; /* Semantika: Omogućava elementima da se proporcionalno šire i zauzmu raspoloživi prostor; Sintaksa: CSS svojstvo sa numeričkom vrednošću */
+    flex-basis: 0; /* Semantika: Postavlja početnu osnovu fleksibilnog elementa na 0, što omogućava ravnomernu podelu prostora; Sintaksa: CSS svojstvo sa dimenzijskom vrednošću */
+    padding-top: 20px; /* Semantika: Postavlja unutrašnji razmak od vrha elementa; Sintaksa: CSS svojstvo sa dimenzijskom vrednošću */
+    padding-bottom: 50px; /* Semantika: Postavlja unutrašnji razmak od dna elementa; Sintaksa: CSS svojstvo sa dimenzijskom vrednošću */
 }
-.footer a:hover { 
-    text-decoration: underline;
+
+.footer a { /* Semantika: Stilizuje sve linkove unutar .footer sekcije; Sintaksa: selektor klase i elementa */
+    text-decoration: none; /* Semantika: Uklanja podvlačenje linkova radi čistijeg izgleda; Sintaksa: CSS svojstvo sa vrednošću */
+    font-size: 18; /* Semantika: Postavlja veličinu fonta; Sintaksa: NEDOVOLJNO: nedostaje jedinica (npr. px, em) */
+    color: #ededed; /* Semantika: Postavlja boju teksta linkova na svetlo sivu; Sintaksa: CSS svojstvo sa heksadecimalnom bojom */
+    font-weight: 500; /* Semantika: Postavlja srednju jačinu fonta; Sintaksa: CSS svojstvo sa numeričkom vrednošću */
 }
-.column{
-    /*border: 1px solid #ededed; */
-    width: 1000px;
-    margin: 0px auto;
+
+.footer a:hover { /* Semantika: Stilizuje linkove u .footer kada korisnik prelazi mišem preko njih (hover efekat); Sintaksa: pseudo-klasa za hover */
+    text-decoration: underline; /* Semantika: Dodaje podvlačenje na link prilikom hovera za vizuelnu povratnu informaciju; Sintaksa: CSS svojstvo sa vrednošću */
 }
-.page .column {
-    height: 100vh;
+
+.column { /* Semantika: Kontejner za centralizaciju i definisanje širine sadržaja; Sintaksa: selektor klase */
+    /*border: 1px solid #ededed; */ /* Semantika: Privremeno onemogućena ivica za vizuelni debug; Sintaksa: CSS komentar */
+    width: 1000px; /* Semantika: Fiksna širina kontejnera na 1000 piksela; Sintaksa: CSS svojstvo sa dimenzijskom vrednošću */
+    margin: 0px auto; /* Semantika: Horizontalno centriranje elementa uz uklanjanje margine gore/dole; Sintaksa: CSS svojstvo sa vrednostima */
 }
-#logo-i-social {
-    display: flex;
-    z-index: 1;
+
+.page .column { /* Semantika: Selektuje element sa klasom 'column' unutar roditelja sa klasom 'page'; Sintaksa: složeni selektor */
+    height: 100vh; /* Semantika: Postavlja visinu elementa da zauzima celu visinu vidljivog dela ekrana (viewport height); Sintaksa: CSS dimenzija u jedinicama viewport visine */
 }
-#logo-holder {
-    flex-grow: 1;
-    text-align: left;
-    margin: 10px;
+
+#logo-i-social { /* Semantika: Selektuje element sa jedinstvenim ID-jem 'logo-i-social'; Sintaksa: ID selektor */
+    display: flex; /* Semantika: Postavlja fleksibilni raspored za element kako bi njegovi potomci bili raspoređeni u liniji; Sintaksa: CSS svojstvo sa vrednošću */
+    z-index: 1; /* Semantika: Postavlja sloj elementa za slojevitost, veća vrednost znači da je element iznad drugih sa manjim z-indeksom; Sintaksa: CSS svojstvo sa numeričkom vrednošću */
 }
-#logo-holder img:hover {
-    transition: transform 0.4s;
-    transform: scale(1.2);
+
+#logo-holder { /* Semantika: Selektuje element sa ID-jem 'logo-holder'; Sintaksa: ID selektor */
+    flex-grow: 1; /* Semantika: Omogućava elementu da se proširi i zauzme sav slobodan prostor u fleks kontejneru; Sintaksa: CSS svojstvo sa numeričkom vrednošću */
+    text-align: left; /* Semantika: Poravnava tekst unutar elementa ulevo; Sintaksa: CSS svojstvo sa vrednošću */
+    margin: 10px; /* Semantika: Postavlja jednaku spoljašnju marginu od 10 piksela sa svih strana; Sintaksa: CSS svojstvo sa dimenzijskom vrednošću */
 }
-#social-holder {
-    display: flex;
-    text-align: right;
-    margin: 10px;
-    gap: 20px;
+
+#logo-holder img:hover { /* Semantika: Stilizuje sliku unutar #logo-holder kada korisnik pređe mišem preko nje; Sintaksa: selektor potomka sa pseudo-klasom hover */
+    transition: transform 0.4s; /* Semantika: Definiše glatku animaciju transformacije koja traje 0.4 sekunde; Sintaksa: CSS svojstvo sa vrednošću i jedinicom vremena */
+    transform: scale(1.2); /* Semantika: Uvećava sliku za 20% prilikom hovera; Sintaksa: CSS transformacija sa faktorom skaliranja */
 }
-#social-holder a img {
-    width: 24px;
-    height: auto;
-    transition: transform 0.4s ;
+
+#social-holder { /* Semantika: Selektuje element sa ID-jem 'social-holder'; Sintaksa: ID selektor */
+    display: flex; /* Semantika: Postavlja fleksibilni raspored za smeštaj društvenih ikonica u red; Sintaksa: CSS svojstvo sa vrednošću */
+    text-align: right; /* Semantika: Poravnava tekst unutar elementa na desno (ovde nema mnogo efekta na fleks elemente); Sintaksa: CSS svojstvo sa vrednošću */
+    margin: 10px; /* Semantika: Postavlja spoljašnje margine oko elementa od 10 piksela; Sintaksa: CSS svojstvo sa dimenzijskom vrednošću */
+    gap: 20px; /* Semantika: Postavlja razmak od 20 piksela između direktnih potomaka u fleks kontejneru; Sintaksa: CSS svojstvo sa dimenzijom */
 }
-#social-holder a img:hover {
-    transform: scale(1.2) ;
+
+#social-holder a img { /* Semantika: Selektuje slike unutar linkova u elementu sa ID-jem 'social-holder'; Sintaksa: složeni selektor potomaka */
+    width: 24px; /* Semantika: Postavlja fiksnu širinu slike na 24 piksela; Sintaksa: CSS dimenzijsko svojstvo */
+    height: auto; /* Semantika: Automatski prilagođava visinu slike u skladu sa proporcijama; Sintaksa: CSS svojstvo sa vrednošću */
+    transition: transform 0.4s ; /* Semantika: Omogućava glatku transformaciju u trajanju od 0.4 sekunde; Sintaksa: CSS svojstvo sa vrednošću i jedinicom vremena */
 }
-#main-menu {
-    display: flex;  
-    justify-content: space-between;
-    margin: 10px;
-    z-index: 0;
+
+#social-holder a img:hover { /* Semantika: Stilizuje slike unutar linkova u #social-holder pri prelasku miša (hover efekt) ; Sintaksa: složeni selektor sa pseudo-klasom */
+    transform: scale(1.2); /* Semantika: Uvećava sliku za 20% prilikom hover efekta; Sintaksa: CSS transformacija sa faktorom skaliranja */
 }
-#main-menu a {
-    flex: grow 1; 
-    text-align: center;
-    display: block;
-    font-family: 'Montserrat', sans-serif; /* Postavlja Poppins kao glavni font */
-    font-size:large;
-    font-weight: 700;
-    text-decoration: none;
-    color: #ededed;
-    transition: 0.4s;
+
+#main-menu { /* Semantika: Selektuje navigacioni meni sa ID-jem 'main-menu'; Sintaksa: ID selektor */
+    display: flex; /* Semantika: Postavlja fleksibilni raspored za horizontalni raspored stavki menija; Sintaksa: CSS svojstvo sa vrednošću */
+    justify-content: space-between; /* Semantika: Ravnomerno raspoređuje stavke menija sa maksimalnim razmakom između njih; Sintaksa: CSS svojstvo sa vrednošću */
+    margin: 10px; /* Semantika: Postavlja spoljašnji razmak oko menija od 10 piksela; Sintaksa: CSS svojstvo sa dimenzijom */
+    z-index: 0; /* Semantika: Postavlja sloj elementa u osnovni nivo za slojevitost; Sintaksa: CSS svojstvo sa numeričkom vrednošću */
 }
-#main-menu a:hover,
-#main-menu a.active {
-    background: #ededed ;
-    color: #0b043a;
+
+#main-menu a { /* Semantika: Stilizuje linkove unutar navigacionog menija #main-menu; Sintaksa: složeni selektor */
+    flex: grow 1;  /* Sintaksa: NEISPRAVNO - treba biti "flex-grow: 1;" ili "flex: 1;" da bi radilo */
+    text-align: center; /* Semantika: Centriranje teksta unutar linkova; Sintaksa: CSS svojstvo sa vrednošću */
+    display: block; /* Semantika: Postavlja linkove kao blok elemente da zauzmu celu širinu; Sintaksa: CSS svojstvo */
+    font-family: 'Montserrat', sans-serif; /* Semantika: Postavlja Montserrat font sa rezervnim sans-serif; Sintaksa: CSS font-family sa navodnicima i rezervom */
+    font-size: large; /* Semantika: Postavlja veličinu fonta na veliki preset; Sintaksa: CSS svojstvo sa ključnom reči */
+    font-weight: 700; /* Semantika: Podebljani tekst; Sintaksa: CSS svojstvo sa numeričkom vrednošću */
+    text-decoration: none; /* Semantika: Uklanja podvlačenje linkova; Sintaksa: CSS svojstvo */
+    color: #ededed; /* Semantika: Boja teksta svetlosiva; Sintaksa: CSS svojstvo sa heksadecimalnom bojom */
+    transition: 0.4s; /* Semantika: Definiše vremenski interval za animacije; Sintaksa: CSS svojstvo sa vrednošću i jedinicom */
 }
-#pocetna {
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    background-attachment: fixed;
-    text-align: center;
+
+#main-menu a:hover, /* Semantika: Stilizuje linkove u #main-menu na hover efekat; Sintaksa: selektor sa pseudo-klasom */
+#main-menu a.active { /* Semantika: Stilizuje aktivni link u #main-menu; Sintaksa: selektor klase */
+    background: #ededed; /* Semantika: Postavlja svetlu pozadinu na aktivni ili hover link; Sintaksa: CSS svojstvo sa heksadecimalnom bojom */
+    color: #0b043a; /* Semantika: Postavlja tamnu boju teksta radi kontrasta; Sintaksa: CSS svojstvo sa heksadecimalnom bojom */
 }
-#pocetna::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../pic/FullStack.jpg");
-    background-size: cover; /* ✅ Pravilno razvučeno */
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: -1;
-    opacity: 0.2;
-    content: "";
-}   
-#pocetna h1 {
-    font-family: 'Montserrat', sans-serif; /* Postavlja Poppins kao glavni font */
-    font-size: 42px;
-    font-weight: 900;
-    margin-top: 0px;
-    padding-top: calc( 50vh - 250px );
+
+#pocetna { /* Semantika: Selektuje element sa ID-jem 'pocetna', obično početna sekcija; Sintaksa: ID selektor */
+    position: relative; /* Semantika: Postavlja lokalni kontekst za apsolutno pozicionirane potomke; Sintaksa: CSS svojstvo sa vrednošću */
+    z-index: 1; /* Semantika: Postavlja sloj elementa, omogućavajući kontrolu slojevitosti; Sintaksa: CSS svojstvo sa numeričkom vrednošću */
+    overflow: hidden; /* Semantika: Sakriva sadržaj koji prelazi granice elementa; Sintaksa: CSS svojstvo sa vrednošću */
+    background-attachment: fixed; /* Semantika: Fiksira pozadinsku sliku u odnosu na viewport, ne pomera se prilikom skrolovanja; Sintaksa: CSS svojstvo sa vrednošću */
+    text-align: center; /* Semantika: Centriranje tekstualnog sadržaja unutar elementa; Sintaksa: CSS svojstvo sa vrednošću */
 }
-.dark-box{
-    font-family: 'Poppins', sans-serif; /* Postavlja Poppins kao glavni font */
-    font-size: 24px;
-    border: #ededed;
-    background-color: #99999915;
-    padding: 40px;
+
+#pocetna::before { /* Semantika: Pseudo-element koji se prikazuje pre sadržaja elementa sa ID 'pocetna'; Sintaksa: selektor pseudo-elementa */
+    position: absolute; /* Semantika: Apsolutno pozicioniranje u odnosu na roditelja; Sintaksa: CSS svojstvo sa vrednošću */
+    top: 0; /* Semantika: Postavlja element na vrh roditeljskog kontejnera; Sintaksa: CSS poziciona vrednost */
+    left: 0; /* Semantika: Postavlja element na levu ivicu roditelja; Sintaksa: CSS poziciona vrednost */
+    width: 100%; /* Semantika: Širina pseudo-elementa zauzima punu širinu roditelja; Sintaksa: CSS dimenzija */
+    height: 100%; /* Semantika: Visina pseudo-elementa zauzima punu visinu roditelja; Sintaksa: CSS dimenzija */
+    background-image: url("../pic/FullStack.jpg"); /* Semantika: Pozadinska slika pseudo-elementa; Sintaksa: CSS svojstvo sa URL vrednošću */
+    background-size: cover; /* Semantika: Slika se pravilno razvuče da pokrije ceo element; Sintaksa: CSS svojstvo */
+    background-repeat: no-repeat; /* Semantika: Sprečava ponavljanje slike; Sintaksa: CSS svojstvo */
+    background-position: center; /* Semantika: Pozicionira sliku u centru elementa; Sintaksa: CSS svojstvo */
+    z-index: -1; /* Semantika: Pseudo-element je ispod ostalih elemenata; Sintaksa: CSS svojstvo sa negativnom vrednošću */
+    opacity: 0.2; /* Semantika: Postavlja providnost na 20%, slika je blago providna; Sintaksa: CSS svojstvo sa decimalnom vrednošću */
+    content: ""; /* Semantika: Neophodan prazan sadržaj za prikaz pseudo-elementa; Sintaksa: CSS svojstvo sa praznim stringom */
 }
-#usluge {
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    background-attachment: fixed;
-    text-align: center;
+
+#pocetna h1 { /* Semantika: Stilizuje h1 naslov unutar elementa sa ID 'pocetna'; Sintaksa: složeni selektor */
+    font-family: 'Montserrat', sans-serif; /* Semantika: Postavlja Montserrat kao primarni, sans-serif kao rezervni font; Sintaksa: CSS font-family sa navodnicima i rezervom */
+    font-size: 42px; /* Semantika: Definiše veličinu fonta na 42 piksela; Sintaksa: CSS dimenzijsko svojstvo */
+    font-weight: 900; /* Semantika: Postavlja vrlo podebljan font; Sintaksa: CSS svojstvo sa numeričkom vrednošću */
+    margin-top: 0px; /* Semantika: Uklanja gornju marginu da naslov bude blizu vrha kontejnera; Sintaksa: CSS dimenzijsko svojstvo */
+    padding-top: calc(50vh - 250px); /* Semantika: Dinamički unutrašnji razmak od vrha zasnovan na visini viewporta; Sintaksa: CSS funkcija calc sa jedinicama */
 }
-#usluge::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../pic/FrontEnd.jpg");
-    background-size: cover; /* ✅ Pravilno razvučeno */
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: -1;
-    opacity: 0.2;
-    content: "";
+
+.dark-box { /* Semantika: Kontejner za isticanje sadržaja sa posebnim stilom; Sintaksa: selektor klase */
+    font-family: 'Poppins', sans-serif; /* Semantika: Postavlja Poppins kao primarni font, sans-serif kao rezervni; Sintaksa: CSS font-family sa navodnicima i rezervom */
+    font-size: 24px; /* Semantika: Veličina fonta od 24 piksela radi bolje čitljivosti; Sintaksa: CSS dimenzijsko svojstvo */
+    border: #ededed; /* Semantika: Pokušaj definisanja ivice, ali NEISPRAVNO jer nedostaju stil i širina; Sintaksa: nepotpun CSS */
+    background-color: #99999915; /* Semantika: Pozadinska boja sa providnošću; Sintaksa: CSS sa hex vrednošću sa alfa kanalom */
+    padding: 40px; /* Semantika: Unutrašnji razmak od 40 piksela sa svih strana; Sintaksa: CSS dimenzijsko svojstvo */
 }
-#karijera {
-        position: relative;
-        z-index: 1;
-        overflow: hidden;
-        background-attachment: fixed;
-        text-align: center;
-}        
-#karijera::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url("../pic/3DDesign.jpg");
-        background-size: cover; /* ✅ Pravilno razvučeno */
-        background-repeat: no-repeat;
-        background-position: center;
-        z-index: -1;
-        opacity: 0.2;
-        content: "";
+
+#usluge { /* Semantika: Selektuje element sa ID 'usluge', verovatno sekciju sa uslugama; Sintaksa: ID selektor */
+    position: relative; /* Semantika: Postavlja lokalni kontekst za apsolutno pozicionirane potomke; Sintaksa: CSS svojstvo */
+    z-index: 1; /* Semantika: Definiše sloj elementa u odnosu na druge; Sintaksa: CSS svojstvo sa numeričkom vrednošću */
+    overflow: hidden; /* Semantika: Sakriva sadržaj koji prelazi granice elementa; Sintaksa: CSS svojstvo */
+    background-attachment: fixed; /* Semantika: Fiksira pozadinu da ne skroluje sa sadržajem; Sintaksa: CSS svojstvo */
+    text-align: center; /* Semantika: Centriranje tekstualnog sadržaja unutar elementa; Sintaksa: CSS svojstvo */
 }
-.align-center{
-    text-align: center;
+
+#usluge::before { /* Semantika: Pseudo-element koji se prikazuje pre sadržaja elementa sa ID 'usluge'; Sintaksa: selektor pseudo-elementa */
+    position: absolute; /* Semantika: Apsolutno pozicioniranje u odnosu na roditelja; Sintaksa: CSS svojstvo */
+    top: 0; /* Semantika: Postavlja pseudo-element na vrh roditeljskog kontejnera; Sintaksa: CSS poziciona vrednost */
+    left: 0; /* Semantika: Postavlja pseudo-element na levu ivicu roditelja; Sintaksa: CSS poziciona vrednost */
+    width: 100%; /* Semantika: Širina pseudo-elementa zauzima punu širinu roditelja; Sintaksa: CSS dimenzijska vrednost */
+    height: 100%; /* Semantika: Visina pseudo-elementa zauzima punu visinu roditelja; Sintaksa: CSS dimenzijska vrednost */
+    background-image: url("../pic/FrontEnd.jpg"); /* Semantika: Postavlja pozadinsku sliku pseudo-elementa; Sintaksa: CSS svojstvo sa URL vrednošću */
+    background-size: cover; /* Semantika: Slika se razvuče da pokrije ceo element; Sintaksa: CSS svojstvo */
+    background-repeat: no-repeat; /* Semantika: Sprečava ponavljanje slike; Sintaksa: CSS svojstvo */
+    background-position: center; /* Semantika: Centriranje pozadinske slike; Sintaksa: CSS svojstvo */
+    z-index: -1; /* Semantika: Postavlja pseudo-element iza ostalih elemenata; Sintaksa: CSS svojstvo sa negativnom vrednošću */
+    opacity: 0.2; /* Semantika: Postavlja providnost na 20%, pravi blagi transparentni efekat; Sintaksa: CSS svojstvo sa decimalnom vrednošću */
+    content: ""; /* Semantika: Neophodan prazan sadržaj da pseudo-element bude vidljiv; Sintaksa: CSS svojstvo sa praznim stringom */
 }
-.align-left{
-    text-align: left;
+
+#karijera { /* Semantika: Selektuje sekciju sa ID-jem 'karijera', verovatno deo sajta posvećen karijeri; Sintaksa: ID selektor */
+    position: relative; /* Semantika: Omogućava apsolutno pozicioniranje unutar sekcije; Sintaksa: CSS svojstvo */
+    z-index: 1; /* Semantika: Postavlja sloj elementa iznad osnovnog nivoa; Sintaksa: CSS svojstvo sa vrednošću */
+    overflow: hidden; /* Semantika: Sakriva sadržaj koji izlazi van granica elementa; Sintaksa: CSS svojstvo */
+    background-attachment: fixed; /* Semantika: Fiksira pozadinu u odnosu na viewport, ne pomera se prilikom skrolovanja; Sintaksa: CSS svojstvo */
+    text-align: center; /* Semantika: Centriranje sadržaja unutar sekcije; Sintaksa: CSS svojstvo */
 }
+
+#karijera::before { /* Semantika: Pseudo-element prikazan ispred sadržaja sekcije sa ID 'karijera'; Sintaksa: selektor pseudo-elementa */
+    position: absolute; /* Semantika: Pozicionira element apsolutno u odnosu na roditelja; Sintaksa: CSS svojstvo */
+    top: 0; /* Semantika: Postavlja element na vrh roditeljskog kontejnera; Sintaksa: CSS poziciona vrednost */
+    left: 0; /* Semantika: Postavlja element na levu ivicu roditelja; Sintaksa: CSS poziciona vrednost */
+    width: 100%; /* Semantika: Element zauzima punu širinu roditelja; Sintaksa: CSS dimenzijska vrednost */
+    height: 100%; /* Semantika: Element zauzima punu visinu roditelja; Sintaksa: CSS dimenzijska vrednost */
+    background-image: url("../pic/3DDesign.jpg"); /* Semantika: Postavlja pozadinsku sliku pseudo-elementa; Sintaksa: CSS svojstvo sa URL vrednošću */
+    background-size: cover; /* Semantika: Slika se pravilno razvuče preko cele površine; Sintaksa: CSS svojstvo */
+    background-repeat: no-repeat; /* Semantika: Sprečava ponavljanje slike; Sintaksa: CSS svojstvo */
+    background-position: center; /* Semantika: Centriranje pozadinske slike u elementu; Sintaksa: CSS svojstvo */
+    z-index: -1; /* Semantika: Postavlja pseudo-element iza ostalih elemenata; Sintaksa: CSS svojstvo sa negativnom vrednošću */
+    opacity: 0.2; /* Semantika: Postavlja providnost na 20%, pravi transparentan efekat; Sintaksa: CSS svojstvo sa decimalnom vrednošću */
+    content: ""; /* Semantika: Prazan sadržaj potreban za prikaz pseudo-elementa; Sintaksa: CSS svojstvo */
+}
+
+.align-center { /* Semantika: Klasa za centriranje tekstualnog sadržaja; Sintaksa: selektor klase */
+    text-align: center; /* Semantika: Centriranje teksta unutar elementa; Sintaksa: CSS svojstvo sa vrednošću */
+}
+
+.align-left { /* Semantika: Klasa za poravnanje teksta ulevo; Sintaksa: selektor klase */
+    text-align: left; /* Semantika: Poravnava tekst na levu stranu unutar elementa; Sintaksa: CSS svojstvo sa vrednošću */
+}
+
 .align-right{
     text-align: right;
 }
-.krugovi{
-    display : flex;
-    margin: 100px 0;
-}
-.krug-holder{
-    flex-grow: 1;
-    text-align: center;
-}
-.krug{
-    display: inline-block;
-    padding:25%;
-    border: 1px solid  black;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    background-color: #ff7816;
-    color:	#0D5E71 ;
-    font-family: 'Montserrat', sans-serif; /* Postavlja Montserat kao font */
-    font-size: 32px;
-    font-weight: 700;
-}
-.oznaka {
-    font-family: 'Poppins', sans-serif; /* Postavlja Montserat kao font */
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-.technologies{
-    margin: 100px 0;
-    display : flex;
-    
-}
-.tehnologija{
-    flex-grow: 1;
-    text-align: center;
-}
-.tehnologija img{
-    width: 48px;
-    height: auto;
-}
-.tehnologija p{
-    text-align: center;
-    font-weight: bold;
-}
-.service-row{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 40px;
 
- 
+.krugovi { /* Semantika: Kontejner za grupu elemenata (verovatno kružića sa brojevima); Sintaksa: selektor klase */
+    display: flex; /* Semantika: Postavlja fleks kontejner za horizontalni raspored potomaka; Sintaksa: CSS svojstvo sa vrednošću */
+    margin: 100px 0; /* Semantika: Postavlja gornju i donju spoljašnju marginu od 100px, bez margine levo-desno; Sintaksa: CSS margin sa vertikalnim i horizontalnim vrednostima */
 }
-.service-row > div {
-    border: solid 1px #ededed;
-    position: relative;
-    width: 300px;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-.service-row > div > img {
-    width: 100%;
-    height: auto;
-    display: block;
-    
-}
-.service-row > div > p {
-    border-top: solid 1px #ededed;
-    position: absolute;
-    left: 0px;
-    right: 0px;    
-    bottom: 0px;
-    padding: 0px;
-    margin: 0px;
-    font-family: 'Poppins', sans-serif; /* Postavlja Poppins kao glavni font */
-    font-size: 16px;
-    background-color: #ffffffa2;
-    color: #0D5E71;
-    font-weight: 700;
-}
-.service-row > div > a {
-    border-top: solid 1px #ededed;
-    position: absolute;
-    left: 0px;
-    right: 0px;    
-    bottom: 0px;
-    padding: 10px;
-    font-family: 'Poppins', sans-serif; /* Postavlja Poppins kao glavni font */
-    font-size: 16px;
-    background-color: #ffffffa2;
-    color: #0D5E71;
-    text-decoration: none;
-    font-weight: 700;
-    margin: 0px;
-    padding: 0px;
-}
-.service-row > div > a,
-    .service-row > div > a.font:link,
-    .service-row > div > a.font:visited,
-    .service-row > div > a.font:hover,
-    .service-row > div > a.font:active{
-        color: #0D5E71;
-        text-decoration: none;
-}
-.service-row > div:hover{
-    transform: scale(1.1);
- }
- #proizvodi h2{
-    padding-top:50px;
-    font-weight: 700;
- }
- .matrica{
-    margin-top: 40px;
-    height: 500px;
-    display: grid;
-    grid-template : "a b c"
-                    "d b e"
-                    "f f g";
-    align-content: space-between;
-    justify-content: space-between;
- }
- .matrica > img{
-    width:100%;
-    height: auto;
- }
- #proizvod-a1{
-    grid-area: a;
- }
- #proizvod-b2{
-    grid-area: b;
 
- }
- #proizvod-c3{
-    grid-area: c;
+.krug-holder { /* Semantika: Kontejner za pojedinačni kružić i njegov opis; Sintaksa: selektor klase */
+    flex-grow: 1; /* Semantika: Omogućava elementu da se proporcionalno proširi i zauzme raspoloživi prostor u fleks kontejneru; Sintaksa: CSS svojstvo sa numeričkom vrednošću */
+    text-align: center; /* Semantika: Centriranje tekstualnog sadržaja unutar elementa; Sintaksa: CSS svojstvo sa vrednošću */
+}
 
- }
- #proizvod-d4{
-    grid-area: d;
+.krug { /* Semantika: Stilizuje element da izgleda kao kružić sa tekstom unutar; Sintaksa: selektor klase */
+    display: inline-block; /* Semantika: Omogućava dimenzionisanje i poravnanje kao inline element sa blok osobinama; Sintaksa: CSS svojstvo */
+    padding: 25%; /* Semantika: Unutrašnji razmak, proporcionalan veličini elementa, pomaže u formiranju kružnog oblika; Sintaksa: CSS dimenzijsko svojstvo */
+    border: 1px solid black; /* Semantika: Crna ivica oko kružića, debljina 1px, čvrsta linija; Sintaksa: CSS svojstvo sa tri vrednosti */
+    border-radius: 50%; /* Semantika: Zaobljenje ivica na 50% čini element kružnim; Sintaksa: CSS svojstvo sa procentualnom vrednošću */
+    width: 50px; /* Semantika: Fiksna širina kružića; Sintaksa: CSS dimenzija */
+    height: 50px; /* Semantika: Fiksna visina kružića; Sintaksa: CSS dimenzija */
+    background-color: #ff7816; /* Semantika: Narandžasta pozadina kružića; Sintaksa: CSS svojstvo sa heksadecimalnom bojom */
+    color: #0D5E71; /* Semantika: Boja teksta unutar kružića, tamno plava; Sintaksa: CSS svojstvo sa heksadecimalnom bojom */
+    font-family: 'Montserrat', sans-serif; /* Semantika: Postavlja Montserrat font za tekst; Sintaksa: CSS font-family */
+    font-size: 32px; /* Semantika: Veličina fonta unutar kružića; Sintaksa: CSS dimenzijsko svojstvo */
+    font-weight: 700; /* Semantika: Podebljani tekst; Sintaksa: CSS svojstvo sa numeričkom vrednošću */
+}
 
- }
- #proizvod-e5{
-    grid-area: e;
+.oznaka { /* Semantika: Stilizuje tekstualne oznake ispod kružića ili drugih elemenata; Sintaksa: selektor klase */
+    font-family: 'Poppins', sans-serif; /* Semantika: Postavlja Poppins kao glavni font, sans-serif kao rezervni; Sintaksa: CSS font-family sa navodnicima i rezervom */
+    font-size: 24px; /* Semantika: Veličina fonta od 24 piksela radi jasnosti; Sintaksa: CSS dimenzijsko svojstvo */
+    font-weight: bold; /* Semantika: Podebljani tekst za isticanje; Sintaksa: CSS svojstvo sa ključnom reči */
+    margin-top: 20px; /* Semantika: Razmak od 20 piksela iznad elementa za razdvajanje; Sintaksa: CSS dimenzijsko svojstvo */
+}
 
- }
- #proizvod-f6{
-    grid-area: f;
-    
- }
- #proizvod-g7{
-    grid-area: g;
- }
- .proizvod{
-    display: grid;
-    grid-template: "region";
-    align-content: stretch;
-    justify-content: stretch;
- }
- .proizvod img {
-    grid-area: region;
-    justify-self: center;
-    align-self: top;
- }
- .proizvod .text-holder {
-    grid-area: region;
-    justify-self: stretch;
-    align-self: stretch;
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    font-size: 22px;
-    font-weight: 900;
-    background-color:#0D5E71dd;
-    opacity: 0.0;
-    transition: 500ms;
- }
- .proizvod:hover .text-holder{
-    opacity: 1;
- }
- #karijera h2{
-    padding-top: 50px;
- }
- .career-columns{
-    display: flex;   
- }
- .job-list{
-    flex-grow: 1;
-    flex-basis: 0;
- }
- .job-descriptions{
-    flex-grow: 2;
-    flex-basis: 0;
- }
-.job-list label{ 
-    display: block;
-    margin-bottom:10px;
-    border: 2px solid #ffffff;
-    background-color: #ededed90;
-    padding: 5px;
-    font-weight: 700;
+.technologies { /* Semantika: Kontejner za grupu tehnologija ili ikonica; Sintaksa: selektor klase */
+    margin: 100px 0; /* Semantika: Postavlja gornju i donju spoljašnju marginu od 100px, bez margine sa strane; Sintaksa: CSS margin sa vertikalnim i horizontalnim vrednostima */
+    display: flex; /* Semantika: Postavlja fleks kontejner za horizontalni raspored elemenata; Sintaksa: CSS svojstvo sa vrednošću */
 }
-.job-descriptions input {
-    display: none;
+
+.tehnologija { /* Semantika: Kontejner za pojedinačnu tehnologiju ili ikonicu; Sintaksa: selektor klase */
+    flex-grow: 1; /* Semantika: Omogućava elementu da se proporcionalno proširi i zauzme raspoloživi prostor unutar fleks kontejnera; Sintaksa: CSS svojstvo sa numeričkom vrednošću */
+    text-align: center; /* Semantika: Centriranje sadržaja unutar elementa; Sintaksa: CSS svojstvo sa vrednošću */
 }
-.job-descriptions .job-opis {
-    display: none;
+
+.tehnologija img { /* Semantika: Stilizuje slike unutar elemenata sa klasom 'tehnologija'; Sintaksa: složeni selektor potomaka */
+    width: 48px; /* Semantika: Postavlja fiksnu širinu slike na 48 piksela; Sintaksa: CSS dimenzijsko svojstvo */
+    height: auto; /* Semantika: Automatski prilagođava visinu da zadrži proporcije slike; Sintaksa: CSS svojstvo sa vrednošću */
 }
-.job-descriptions input:checked+.job-opis {
-    display: block;
+
+.tehnologija p { /* Semantika: Stilizuje paragraf unutar elemenata sa klasom 'tehnologija'; Sintaksa: složeni selektor potomaka */
+    text-align: center; /* Semantika: Centriranje teksta u paragrafu; Sintaksa: CSS svojstvo sa vrednošću */
+    font-weight: bold; /* Semantika: Podebljani tekst radi isticanja naziva tehnologije; Sintaksa: CSS svojstvo sa ključnom reči */
 }
-.job-opis{
-    display: block;
-    margin-left:10px;
-    border: 2px solid #ffffff;
-    background-color: #ededed90;
-    color: #323232;
-    padding: 5px;
-    font-weight: 500;
-    font-size: 20;
-    text-align: left;
+
+.service-row { /* Semantika: Kontejner koji grupiše usluge u horizontalni red; Sintaksa: selektor klase */
+    display: flex; /* Semantika: Postavlja fleks kontejner za raspored potomaka; Sintaksa: CSS svojstvo sa vrednošću */
+    flex-direction: row; /* Semantika: Orijentiše fleks elemente horizontalno; Sintaksa: CSS svojstvo sa vrednošću */
+    justify-content: space-between; /* Semantika: Ravnomerno raspoređuje stavke sa maksimalnim razmakom između njih; Sintaksa: CSS svojstvo */
+    margin-bottom: 40px; /* Semantika: Postavlja razmak ispod reda usluga; Sintaksa: CSS dimenzijsko svojstvo */
 }
-#kontakt h2{
-    padding: 80px 0px 40px 0px;
+
+.service-row > div { /* Semantika: Stilizuje direktne potomke divove unutar '.service-row'; Sintaksa: selektor potomaka */
+    border: solid 1px #ededed; /* Semantika: Dodaje svetlo sivu ivicu debljine 1px; Sintaksa: CSS svojstvo sa tri vrednosti */
+    position: relative; /* Semantika: Postavlja lokalni kontekst za apsolutno pozicionirane elemente unutar; Sintaksa: CSS svojstvo */
+    width: 300px; /* Semantika: Fiksira širinu na 300 piksela; Sintaksa: CSS dimenzijsko svojstvo */
+    height: auto; /* Semantika: Visina se automatski prilagođava sadržaju; Sintaksa: CSS svojstvo */
+    transition: transform 0.3s ease; /* Semantika: Dodaje glatku animaciju transformacije sa trajanjem i efektom olakšanja; Sintaksa: CSS svojstvo */
 }
-.kontak-region{
-    display: grid;
-    grid-template: "adrese mapa"
+
+.service-row > div > img { /* Semantika: Stilizuje slike koje su direktni potomci divova unutar .service-row; Sintaksa: složeni selektor potomaka */
+    width: 100%; /* Semantika: Slika zauzima punu širinu roditeljskog elementa; Sintaksa: CSS dimenzijsko svojstvo */
+    height: auto; /* Semantika: Visina slike se automatski prilagođava da zadrži proporcije; Sintaksa: CSS svojstvo */
+    display: block; /* Semantika: Uklanja praznine ispod slike i omogućava pravilno dimenzionisanje; Sintaksa: CSS svojstvo */
+}
+
+.service-row > div > p { /* Semantika: Stilizuje paragraf unutar divova koji su potomci '.service-row', često za opis ispod slike; Sintaksa: složeni selektor potomaka */
+    border-top: solid 1px #ededed; /* Semantika: Dodaje tanku gornju ivicu svetlo sive boje; Sintaksa: CSS svojstvo sa tri vrednosti */
+    position: absolute; /* Semantika: Apsolutno pozicionira paragraf unutar roditelja; Sintaksa: CSS svojstvo */
+    left: 0px; /* Semantika: Postavlja levu ivicu paragraf na početak roditelja; Sintaksa: CSS poziciona vrednost */
+    right: 0px; /* Semantika: Postavlja desnu ivicu na kraj roditelja, proširujući paragraf horizontalno; Sintaksa: CSS poziciona vrednost */
+    bottom: 0px; /* Semantika: Postavlja paragraf na donju ivicu roditelja; Sintaksa: CSS poziciona vrednost */
+    padding: 0px; /* Semantika: Uklanja unutrašnje margine; Sintaksa: CSS dimenzijsko svojstvo */
+    margin: 0px; /* Semantika: Uklanja spoljašnje margine; Sintaksa: CSS dimenzijsko svojstvo */
+    font-family: 'Poppins', sans-serif; /* Semantika: Postavlja font Poppins sa rezervnim sans-serif; Sintaksa: CSS font-family */
+    font-size: 16px; /* Semantika: Veličina fonta 16 piksela za čitljivost; Sintaksa: CSS dimenzijsko svojstvo */
+    background-color: #ffffffa2; /* Semantika: Poluprovidna bela pozadina radi kontrasta; Sintaksa: CSS sa hex bojom sa alfa kanalom */
+    color: #0D5E71; /* Semantika: Tamno plava boja teksta; Sintaksa: CSS boja sa heksadecimalnim kodom */
+    font-weight: 700; /* Semantika: Podebljani tekst; Sintaksa: CSS svojstvo sa numeričkom vrednošću */
+}
+
+.service-row > div > a { /* Semantika: Stilizuje link unutar divova koji su direktni potomci .service-row; Sintaksa: složeni selektor potomaka */
+    border-top: solid 1px #ededed; /* Semantika: Dodaje tanku gornju ivicu svetlo sive boje; Sintaksa: CSS svojstvo sa tri vrednosti */
+    position: absolute; /* Semantika: Apsolutno pozicionira link unutar roditelja; Sintaksa: CSS svojstvo */
+    left: 0px; /* Semantika: Postavlja levu ivicu linka na početak roditelja; Sintaksa: CSS poziciona vrednost */
+    right: 0px; /* Semantika: Postavlja desnu ivicu linka na kraj roditelja, proširujući horizontalno; Sintaksa: CSS poziciona vrednost */
+    bottom: 0px; /* Semantika: Postavlja link na donju ivicu roditelja; Sintaksa: CSS poziciona vrednost */
+    padding: 10px; /* Semantika: Unutrašnji razmak oko sadržaja linka; Sintaksa: CSS dimenzijsko svojstvo */
+    font-family: 'Poppins', sans-serif; /* Semantika: Postavlja Poppins font sa rezervnim sans-serif; Sintaksa: CSS font-family */
+    font-size: 16px; /* Semantika: Veličina fonta 16 piksela; Sintaksa: CSS dimenzijsko svojstvo */
+    background-color: #ffffffa2; /* Semantika: Poluprovidna bela pozadina za kontrast; Sintaksa: CSS boja sa alfa kanalom */
+    color: #0D5E71; /* Semantika: Tamno plava boja teksta; Sintaksa: CSS boja */
+    text-decoration: none; /* Semantika: Uklanja podvlačenje sa linka; Sintaksa: CSS svojstvo */
+    font-weight: 700; /* Semantika: Podebljani tekst; Sintaksa: CSS svojstvo */
+    margin: 0px; /* Semantika: Uklanja spoljašnje margine; Sintaksa: CSS dimenzijsko svojstvo */
+    padding: 0px; /* Semantika: Preklapa prethodni padding, efektivno uklanja unutrašnji razmak (konflikt sa prethodnim padding: 10px); Sintaksa: CSS dimenzijsko svojstvo */
+}
+
+.service-row > div > a, /* Semantika: Stilizuje sve linkove unutar divova u .service-row; Sintaksa: selektor potomaka */
+.service-row > div > a.font:link, /* Semantika: Stilizuje nelinkovane linkove sa klasom 'font'; Sintaksa: složeni selektor sa pseudo-klasom */
+.service-row > div > a.font:visited, /* Semantika: Stilizuje posećene linkove sa klasom 'font'; Sintaksa: složeni selektor sa pseudo-klasom */
+.service-row > div > a.font:hover, /* Semantika: Stilizuje linkove sa klasom 'font' pri hover efektu; Sintaksa: složeni selektor sa pseudo-klasom */
+.service-row > div > a.font:active { /* Semantika: Stilizuje aktivne linkove sa klasom 'font'; Sintaksa: složeni selektor sa pseudo-klasom */
+    color: #0D5E71; /* Semantika: Postavlja tamno plavu boju teksta za sve navedene stanja; Sintaksa: CSS svojstvo sa heksadecimalnom bojom */
+    text-decoration: none; /* Semantika: Uklanja podvlačenje linkova za sve navedene stanja; Sintaksa: CSS svojstvo */
+}
+
+.service-row > div:hover { /* Semantika: Stilizuje divove unutar .service-row kada se prelazi mišem preko njih; Sintaksa: selektor potomaka sa pseudo-klasom hover */
+    transform: scale(1.1); /* Semantika: Uvećava element za 10% prilikom hover efekta radi naglašavanja; Sintaksa: CSS transformacija sa faktorom skaliranja */
+}
+
+ #proizvodi h2 { /* Semantika: Stilizuje h2 naslov unutar elementa sa ID 'proizvodi'; Sintaksa: složeni selektor */
+    padding-top: 50px; /* Semantika: Dodaje razmak od 50 piksela iznad naslova za vizuelni balans; Sintaksa: CSS dimenzijsko svojstvo */
+    font-weight: 700; /* Semantika: Podebljani tekst naslova za naglasak; Sintaksa: CSS svojstvo sa numeričkom vrednošću */
+}
+
+ .matrica { /* Semantika: Kontejner sa rasporedom elemenata u mreži; Sintaksa: selektor klase */
+    margin-top: 40px; /* Semantika: Postavlja gornju spoljašnju marginu za razmak; Sintaksa: CSS dimenzijsko svojstvo */
+    height: 500px; /* Semantika: Fiksna visina mreže za kontrolu prostora; Sintaksa: CSS dimenzijsko svojstvo */
+    display: grid; /* Semantika: Aktivira CSS Grid layout za precizan raspored potomaka; Sintaksa: CSS svojstvo */
+    grid-template: "a b c"
+                   "d b e"
+                   "f f g"; /* Semantika: Definiše oblasti mreže po redovima i kolonama; Sintaksa: CSS svojstvo sa string vrednostima za grid template areas */
+    align-content: space-between; /* Semantika: Raspoređuje mrežu vertikalno sa prostorom između; Sintaksa: CSS svojstvo */
+    justify-content: space-between; /* Semantika: Raspoređuje mrežu horizontalno sa prostorom između; Sintaksa: CSS svojstvo */
+}
+
+ .matrica > img { /* Semantika: Stilizuje sve slike koje su direktni potomci elementa sa klasom 'matrica'; Sintaksa: složeni selektor potomaka */
+    width: 100%; /* Semantika: Slike zauzimaju punu širinu roditeljskog elementa; Sintaksa: CSS dimenzijsko svojstvo */
+    height: auto; /* Semantika: Visina slike se automatski prilagođava da održi proporcije; Sintaksa: CSS svojstvo */
+}
+
+ #proizvod-a1 { /* Semantika: Dodeljuje elementu sa ID 'proizvod-a1' grid oblast označenu kao 'a' u roditeljskom grid kontejneru; Sintaksa: ID selektor */
+    grid-area: a; /* Semantika: Postavlja element u definisanu oblast mreže 'a'; Sintaksa: CSS svojstvo sa vrednošću koja odgovara nazivu oblasti */
+}
+
+ #proizvod-b2 { /* Semantika: Dodeljuje elementu sa ID 'proizvod-b2' grid oblast 'b'; Sintaksa: ID selektor */
+    grid-area: b; /* Semantika: Postavlja element u grid oblast 'b'; Sintaksa: CSS svojstvo */
+}
+
+#proizvod-c3 { /* Semantika: Dodeljuje elementu sa ID 'proizvod-c3' grid oblast 'c'; Sintaksa: ID selektor */
+    grid-area: c; /* Semantika: Postavlja element u grid oblast 'c'; Sintaksa: CSS svojstvo */
+}
+
+#proizvod-d4 { /* Semantika: Dodeljuje elementu sa ID 'proizvod-d4' grid oblast 'd'; Sintaksa: ID selektor */
+    grid-area: d; /* Semantika: Postavlja element u grid oblast 'd'; Sintaksa: CSS svojstvo */
+}
+
+#proizvod-e5 { /* Semantika: Dodeljuje elementu sa ID 'proizvod-e5' grid oblast 'e'; Sintaksa: ID selektor */
+    grid-area: e; /* Semantika: Postavlja element u grid oblast 'e'; Sintaksa: CSS svojstvo */
+}
+
+#proizvod-f6 { /* Semantika: Dodeljuje elementu sa ID 'proizvod-f6' grid oblast 'f'; Sintaksa: ID selektor */
+    grid-area: f; /* Semantika: Postavlja element u grid oblast 'f'; Sintaksa: CSS svojstvo */
+}
+
+#proizvod-g7 { /* Semantika: Dodeljuje elementu sa ID 'proizvod-g7' grid oblast 'g'; Sintaksa: ID selektor */
+    grid-area: g; /* Semantika: Postavlja element u grid oblast 'g'; Sintaksa: CSS svojstvo */
+}
+
+.proizvod { /* Semantika: Kontejner za pojedinačni proizvod ili stavku, koristi CSS Grid za raspored; Sintaksa: selektor klase */
+    display: grid; /* Semantika: Aktivira CSS Grid layout; Sintaksa: CSS svojstvo */
+    grid-template: "region"; /* Semantika: Definiše jedinstvenu grid oblast nazvanu "region"; Sintaksa: CSS svojstvo sa string vrednošću */
+    align-content: stretch; /* Semantika: Vertikalno rasteže sadržaj da popuni dostupni prostor; Sintaksa: CSS svojstvo */
+    justify-content: stretch; /* Semantika: Horizontalno rasteže sadržaj da popuni prostor; Sintaksa: CSS svojstvo */
+}
+
+.proizvod img { /* Semantika: Stilizuje slike unutar .proizvod kontejnera; Sintaksa: složeni selektor potomaka */
+    grid-area: region; /* Semantika: Postavlja sliku da zauzme grid oblast "region"; Sintaksa: CSS svojstvo */
+    justify-self: center; /* Semantika: Horizontalno centriranje slike unutar grid ćelije; Sintaksa: CSS svojstvo */
+    align-self: top; /* Semantika: Vertikalno poravnanje slike na vrh ćelije; Sintaksa: CSS svojstvo */
+}
+
+.proizvod .text-holder { /* Semantika: Kontejner za tekst preko slike unutar .proizvod; Sintaksa: složeni selektor potomaka */
+    grid-area: region; /* Semantika: Postavlja tekst da zauzme istu grid oblast kao slika; Sintaksa: CSS svojstvo */
+    justify-self: stretch; /* Semantika: Rasteže tekst horizontalno u grid ćeliji; Sintaksa: CSS svojstvo */
+    align-self: stretch; /* Semantika: Rasteže tekst vertikalno u grid ćeliji; Sintaksa: CSS svojstvo */
+    display: grid; /* Semantika: Postavlja unutrašnji grid za precizno centriranje sadržaja; Sintaksa: CSS svojstvo */
+    align-content: center; /* Semantika: Vertikalno centrira sadržaj unutar kontejnera; Sintaksa: CSS svojstvo */
+    justify-content: center; /* Semantika: Horizontalno centrira sadržaj unutar kontejnera; Sintaksa: CSS svojstvo */
+    font-size: 22px; /* Semantika: Veličina fonta za tekst; Sintaksa: CSS dimenzijsko svojstvo */
+    font-weight: 900; /* Semantika: Podebljani font; Sintaksa: CSS svojstvo */
+    background-color: #0D5E71dd; /* Semantika: Tamno plava poluprovidna pozadina; Sintaksa: CSS sa heksadecimalnom bojom sa alfa kanalom */
+    opacity: 0.0; /* Semantika: Potpuno providan element inicijalno; Sintaksa: CSS svojstvo */
+    transition: 500ms; /* Semantika: Glatka promena svojstva opacity u trajanju od 500 milisekundi; Sintaksa: CSS svojstvo */
+}
+
+.proizvod:hover .text-holder { /* Semantika: Prikazuje tekst kada se hoveruje preko .proizvod; Sintaksa: kombinovani selektor sa pseudo-klasom */
+    opacity: 1; /* Semantika: Čini tekst potpuno vidljivim; Sintaksa: CSS svojstvo */
+}
+
+#karijera h2 { /* Semantika: Stilizuje h2 naslov unutar sekcije karijera; Sintaksa: složeni selektor */
+    padding-top: 50px; /* Semantika: Dodaje razmak iznad naslova; Sintaksa: CSS dimenzijsko svojstvo */
+}
+
+.career-columns { /* Semantika: Kontejner za raspored kolona unutar karijere; Sintaksa: selektor klase */
+    display: flex; /* Semantika: Postavlja fleks kontejner za horizontalni raspored; Sintaksa: CSS svojstvo */
+}
+
+.job-list { /* Semantika: Lista poslova, zauzima manji deo prostora; Sintaksa: selektor klase */
+    flex-grow: 1; /* Semantika: Omogućava rast u fleks kontejneru; Sintaksa: CSS svojstvo */
+    flex-basis: 0; /* Semantika: Početna veličina je 0, fleks raste prema dostupnom prostoru; Sintaksa: CSS svojstvo */
+}
+
+.job-descriptions { /* Semantika: Opis poslova, zauzima veći deo prostora; Sintaksa: selektor klase */
+    flex-grow: 2; /* Semantika: Dva puta veća fleks vrednost u odnosu na .job-list; Sintaksa: CSS svojstvo */
+    flex-basis: 0; /* Semantika: Početna veličina je 0, raste prema prostoru; Sintaksa: CSS svojstvo */
+}
+.job-list label { /* Semantika: Stilizuje label elemente unutar .job-list kao blok elemente; Sintaksa: složeni selektor potomaka */
+    display: block; /* Semantika: Čini label element blokom da zauzima celu širinu; Sintaksa: CSS svojstvo */
+    margin-bottom: 10px; /* Semantika: Razmak ispod svakog labela; Sintaksa: CSS dimenzijsko svojstvo */
+    border: 2px solid #ffffff; /* Semantika: Bela ivica debljine 2px; Sintaksa: CSS svojstvo sa tri vrednosti */
+    background-color: #ededed90; /* Semantika: Svetlo siva pozadina sa providnošću; Sintaksa: CSS boja sa alfa kanalom */
+    padding: 5px; /* Semantika: Unutrašnji razmak od 5 piksela; Sintaksa: CSS dimenzijsko svojstvo */
+    font-weight: 700; /* Semantika: Podebljani tekst; Sintaksa: CSS svojstvo */
+}
+
+.job-descriptions input { /* Semantika: Stilizuje input elemente unutar .job-descriptions (verovatno radio dugmad) */
+    display: none; /* Semantika: Sakriva input elemente sa ekrana; Sintaksa: CSS svojstvo */
+}
+
+.job-descriptions .job-opis { /* Semantika: Skriva sve opise poslova inicijalno; Sintaksa: složeni selektor */
+    display: none; /* Semantika: Ne prikazuje element; Sintaksa: CSS svojstvo */
+}
+
+.job-descriptions input:checked + .job-opis { /* Semantika: Prikazuje opis posla kada je odgovarajući input selektovan; Sintaksa: CSS selektor susednog brata sa pseudo-klasom */
+    display: block; /* Semantika: Prikazuje element kao blok; Sintaksa: CSS svojstvo */
+}
+
+.job-opis { /* Semantika: Stilizuje blokove sa opisom posla; Sintaksa: selektor klase */
+    display: block; /* Semantika: Prikazuje element; Sintaksa: CSS svojstvo */
+    margin-left: 10px; /* Semantika: Razmak sa leve strane; Sintaksa: CSS dimenzijsko svojstvo */
+    border: 2px solid #ffffff; /* Semantika: Bela ivica debljine 2px; Sintaksa: CSS svojstvo */
+    background-color: #ededed90; /* Semantika: Svetlo siva providna pozadina; Sintaksa: CSS boja sa alfa */
+    color: #323232; /* Semantika: Tamno siva boja teksta; Sintaksa: CSS svojstvo */
+    padding: 5px; /* Semantika: Unutrašnji razmak; Sintaksa: CSS dimenzija */
+    font-weight: 500; /* Semantika: Srednje podebljani tekst; Sintaksa: CSS svojstvo */
+    font-size: 20px; /* Semantika: NEDOVOLJNO: Nedostaje jedinica (px, em, itd.); Sintaksa: nepotpuno CSS svojstvo */
+    text-align: left; /* Semantika: Poravnanje teksta ulevo; Sintaksa: CSS svojstvo */
+}
+
+#kontakt h2 { /* Semantika: Stilizuje naslov u sekciji kontakta; Sintaksa: složeni selektor */
+    padding: 80px 0px 40px 0px; /* Semantika: Gornji i donji unutrašnji razmak, bez margine sa strane; Sintaksa: CSS shorthand */
+}
+
+.kontak-region { /* Semantika: Glavni kontejner za region kontakta sa grid rasporedom; Sintaksa: selektor klase */
+    display: grid; /* Semantika: Aktivira CSS Grid layout; Sintaksa: CSS svojstvo */
+    grid-template: "adrese mapa" /* Semantika: Definiše grid oblasti po redovima i kolonama; Sintaksa: CSS grid-template sa string vrednostima */
                     "mailovi mapa";
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 300px 1fr; /* Semantika: Dve kolone, fiksna širina 300px i fleksibilna ostatak prostora; Sintaksa: CSS dimenzijsko svojstvo */
 }
-.kontakt-adrese{
-    text-align: left;
-    grid-area: adrese;
-    padding-bottom: 15px;
-    font-size: 14px;
+
+.kontakt-adrese { /* Semantika: Stilizuje sekciju sa adresama kontakta; Sintaksa: selektor klase */
+    text-align: left; /* Semantika: Poravnanje teksta ulevo; Sintaksa: CSS svojstvo */
+    grid-area: adrese; /* Semantika: Pozicionira element u grid oblast 'adrese'; Sintaksa: CSS grid svojstvo */
+    padding-bottom: 15px; /* Semantika: Razmak ispod elementa; Sintaksa: CSS dimenzijsko svojstvo */
+    font-size: 14px; /* Semantika: Manja veličina fonta za adrese; Sintaksa: CSS dimenzijsko svojstvo */
 }
-.kontakt-mailovi{
-    grid-area: mailovi;
-    text-align: left;
-    font-size: 14px;
+
+.kontakt-mailovi { /* Semantika: Stilizuje sekciju sa email adresama u kontaktu; Sintaksa: selektor klase */
+    grid-area: mailovi; /* Semantika: Pozicionira element u grid oblast 'mailovi'; Sintaksa: CSS grid svojstvo */
+    text-align: left; /* Semantika: Poravnava tekst ulevo za čitljivost; Sintaksa: CSS svojstvo */
+    font-size: 14px; /* Semantika: Postavlja manju veličinu fonta; Sintaksa: CSS dimenzijsko svojstvo */
 }
-.kontakt-mailovi a {
-    text-decoration: none;
-    color: #ededed;
+
+.kontakt-mailovi a { /* Semantika: Stilizuje linkove unutar .kontakt-mailovi; Sintaksa: složeni selektor potomaka */
+    text-decoration: none; /* Semantika: Uklanja podvlačenje linkova radi čistijeg izgleda; Sintaksa: CSS svojstvo */
+    color: #ededed; /* Semantika: Postavlja svetlo sivu boju linkova; Sintaksa: CSS svojstvo */
 }
-.kontakt-mailovi a:hover{
-    color: #FF6F00;
-    text-decoration: underline;
+
+.kontakt-mailovi a:hover { /* Semantika: Stilizuje linkove pri prelasku mišem (hover) unutar .kontakt-mailovi; Sintaksa: selektor sa pseudo-klasom */
+    color: #FF6F00; /* Semantika: Menja boju linkova u narandžastu radi naglašavanja; Sintaksa: CSS svojstvo */
+    text-decoration: underline; /* Semantika: Dodaje podvlačenje radi vizuelne povratne informacije; Sintaksa: CSS svojstvo */
 }
-.kontakt-mapa{
-    grid-area: mapa;
+
+.kontakt-mapa { /* Semantika: Stilizuje element za prikaz mape unutar grid oblasti; Sintaksa: selektor klase */
+    grid-area: mapa; /* Semantika: Pozicionira mapu u grid oblast 'mapa'; Sintaksa: CSS grid svojstvo */
 }
