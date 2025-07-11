@@ -1,21 +1,45 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  <!-- Deklaracija HTML5 dokumenta. Kaže browseru da koristi HTML5 standard. -->
 
-<html lang="sr">
-<head>
-    <title>NoOneNeo Full Stack Web Developer.</title>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <meta content="Branislav (NoOneNeo) Paunović" name="author"/>
-    <meta content="NoOneNeo Full Stack Web Developer, UX/UI &amp; 3D Designer" name="keywords"/>
-    <meta content="Full-Stack Developer, UX/UI &amp; 3D Designer. Based in Belgrade, Working Worldwide." name="description"/>
-    <meta content="index, follow" name="robots"/>
-    <link href="css/main.css" rel="stylesheet"/>
-    <script defer="" src="js/functions.js"> </script>
-    <link href="pic/Logo 80px Branislav (NoOneNeo) Paunovic.png" rel="icon" type="image/x-icon"/>
-    <link href="pic/Logo 80px Branislav (NoOneNeo) Paunovic.png" rel="apple-touch-icon"/>
-</head>
-<body>
-    <div class="header">
+<html lang="sr" dir="ltr">  <!-- Početak HTML dokumenta. Atribut lang="sr" označava srpski jezik dokumenta. -->
+
+    <head>  <!-- Početak head sekcije gde se nalaze meta podaci, naslov, CSS, JS itd. -->
+
+        <meta charset="utf-8"/>  <!-- Postavlja kodiranje karaktera na UTF-8, podržava sve jezike (i srpski). -->
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>  <!-- Omogućava responzivnost. Prilagođava prikaz mobilnim uređajima. -->
+        <!-- This meta tag ensures the page scales correctly on different devices -->
+        
+        <meta content="Branislav (NoOneNeo) Paunović" name="author"/>  <!-- Autor stranice. Korisno za pretraživače i informacije o vlasniku. -->
+        <!-- This meta tag specifies the author of the page, useful for SEO and attribution -->
+
+        <meta content="NoOneNeo Full Stack Web Developer, UX/UI &amp; 3D Designer" name="keywords"/>  <!-- Ključne reči za SEO (danas manje bitne). -->
+        <meta content="Full-Stack Developer, UX/UI &amp; 3D Designer. Based in Belgrade, Working Worldwide." name="description"/>  <!-- Opis sajta, prikazuje se na Google rezultatima i kod deljenja na mrežama. -->
+        <meta content="index, follow" name="robots"/>  <!-- SEO direktiva: indeksiraj ovu stranicu i prati sve linkove. -->
+        <!-- This meta tag tells search engines to index the page and follow links -->
+
+        <title> NoOneNeo Full Stack Web Developer. </title>  <!-- Naslov stranice koji se prikazuje u tabu browsera. Važan i za SEO. -->
+        <!-- This title appears in the browser tab and search engine results -->
+        
+        <link href="assets/css/main.css" rel="stylesheet"/>  <!-- Učitava eksterni CSS fajl iz foldera css/. -->
+        <script defer="" src="assets/js/main.js"></script>  <!-- Učitava eksterni JS fajl, defer = čekaj da se HTML učita pa pokreni JS. -->
+        
+        <link href="assets/pic/logo.png" rel="icon" type="image/x-icon"/> <!-- Sets the favicon icon shown in browser tabs -->
+        <link href="assets/pic/logo.png" rel="apple-touch-icon"/> <!-- Defines an icon for Apple devices when saving the page to the home screen -->
+
+        <!-- This script tag loads the JavaScript file, ensuring it runs after the HTML is fully parsed -->
+            <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">   Links to the Bootstrap CSS file -->
+            <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>  Loads the Bootstrap JavaScript bundle, which includes Popper.js for tooltips and popovers -->
+            <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">     Links to the Flatpickr CSS file for date and time picker -->
+            <!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>  Loads the Flatpickr JavaScript library for date and time picking functionality -->
+            <!-- <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js" defer></script>  Loads the Pikaday JavaScript library for date picking functionality -->
+            <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"> Links to the Pikaday CSS file for styling the date picker -->
+            <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">  Links to the jQuery UI CSS file for additional UI components and styles -->
+            <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>  Loads the jQuery library, which is a dependency for many JavaScript libraries and plugins -->
+            <!-- <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" defer></script> Loads the jQuery UI library, which provides additional UI components and interactions -->
+        
+    </head>  <!-- Zatvara head sekciju. -->
+    <body> <!-- Start of body section -->
+
+        <div class="header">
         <div class="column">
             <div id="logo-i-social">
                 <div id="logo-holder">
@@ -33,299 +57,306 @@
                 </div>
             </div>
             <nav id="main-menu">
-                <a class="active" href="#">Početna</a>
-                <a href="#o-nama">O NoOneNeo</a>
-                <a href="#usluge">Usluge</a>
-                <a href="#proizvodi">Proizvodi</a>
-                <a href="#karijera">Karijera</a>
-                <a href="#kontakt">Kontakt</a>
+                <a class="active" href="#">Home</a>
+                <a href="#o-nama">About</a>
+                <a href="#usluge">Services</a>
+                <a href="#proizvodi">Packages</a>
+                <a href="#karijera">Career</a>
+                <a href="#kontakt">Contact</a>
             </nav>
         </div>
-</div>
-<div class="page" id="pocetna">
-<div class="column">
-<h1>Full-Stack Developer, UX/UI &amp; 3D Designer.</h1>
-<div class="dark-box">
-<p>I build meaningful digital experiences–from custom WordPress websites and modern web apps to immersive UX/UI designs and cinematic 3D visuals.</p>
-<p>I don’t just build websites – I build experiences that leave a mark. With a sharp eye for design, solid full-stack dev skills, and a passion for storytelling through code and 3D visuals – I turn ideas into bold digital realities. Born in Belgrade. Creating for the world. I work solo. I work smart. I work like it’s personal – because it is. This isn’t just work. It’s my comeback. Let’s build something unforgettable.</p>
-</div>
-</div>
-</div>
-<div class="page" id="o-nama">
-<div class="column">
-<h2> O nama</h2> <br/><br/>
-<p class="align-center" style="text-transform: uppercase"> Building the future with technologies that power the world.</p> <br/> <br/>
-<div class="krugovi">
-<div class="krug-holder">
-<div class="krug">11</div>
-<div class="oznaka">Zaposlenih</div>
-</div>
-<div class="krug-holder">
-<div class="krug">31</div>
-<div class="oznaka">Projekat</div>
-</div>
-<div class="krug-holder">
-<div class="krug">17</div>
-<div class="oznaka">Paretnera</div>
-</div>
-</div>
-<p class="align-center"> Fueled by vision. Crafted by skill. I am NoOneNeo.</p>
-<div class="technologies">
-<div class="tehnologija">
-<img alt="HTML5" src="assets/pic/html.png"/>
-<p>HTML 5</p>
-</div>
-<div class="tehnologija">
-<img alt="CSS3" src="assets/pic/css.png"/>
-<p> CSS 3 </p>
-</div>
-<div class="tehnologija">
-<img alt="JavaScript" src="assets/pic/js.png"/>
-<p> JavaScript </p>
-</div>
-<div class="tehnologija">
-<img alt="Php" src="assets/pic/php.png"/>
-<p> Php </p>
-</div>
-<div class="tehnologija">
-<img alt="MySql" src="assets/pic/mysql.png"/>
-<p> MySQL </p>
-</div>
-<div class="tehnologija">
-<img alt="WordPress" src="assets/pic/wordpress.png"/>
-<p> WorPress </p>
-</div>
-<div class="tehnologija">
-<img alt="Autodesk" src="assets/pic/autodesk.png"/>
-<p> Autodesk </p>
-</div>
-</div>
-</div>
-</div>
-<div class="page" id="usluge">
-<div class="column">
-<h2>Usluge</h2> <br/> <br/>
-<p class="align-center"> It Services that we provide.</p> <br/> <br/>
-<div class="service-row">
-<div>
-<img alt="UX/UI &amp; Front End Development" src="assets/pic/FrontEnd.jpg"/>
-<p>UX/UI &amp; Front End Development</p>
-</div>
-<div>
-<img alt="BackEnd Tech,Php &amp; MySQL" src="assets/pic/BackEnd.jpg"/>
-<p>BackEnd Tech, Php &amp; MySQL</p>
-</div>
-<div>
-<img alt="ull Stack Custom Development" src="assets/pic/FullStack.jpg"/>
-<p>Full Stack Custom Development</p>
-</div>
-</div>
-<div class="service-row">
-<div>
-<img alt="3D Design with Autodesk tools" src="assets/pic/3DDesign.jpg"/>
-<p>3D Design with Autodesk tools</p>
-</div>
-<div>
-<img alt="Our references NutriPlAin" src="assets/pic/NutriPlAIn.jpg"/>
-<a href="https:nutriplain.com">Our references NutriPlAin</a>
-</div>
-<div>
-<img alt="Our references AngelsTouch" src="assets/pic/AngelsTouch.jpg"/>
-<a href="https://AngelsTouch.rs">Our references AngelsTouch</a>
-</div>
-</div>
-</div>
-</div>
-<div class="page" id="proizvodi">
-<div class="column">
-<h2> Proizvodi </h2>
-<div class="matrica">
-<div class="proizvod" id="proizvod-a1">
-<img alt="Osnovni Paket Full Stack" src="assets/pic/Basic.jpg"/>
-<div class="text-holder">
-<span>Osnovni Paket Full Stack </span>
-</div>
-</div>
-<div class="proizvod" id="proizvod-b2">
-<img alt="Poslovni Paket Full Stack" src="assets/pic/Business.jpg"/>
-<div class="text-holder">
-<span>Poslovni Paket Full Stack</span>
-</div>
-</div>
-<div class="proizvod" id="proizvod-c3">
-<img alt="Pro Paket Full Stack" src="assets/pic/Pro.jpg"/>
-<div class="text-holder">
-<span>Pro Paket</span>
-</div>
-</div>
-<div class="proizvod" id="proizvod-d4">
-<img alt="Visejezicni sajtovi" src="assets/pic/English.jpg"/>
-<div class="text-holder">
-<span>Visejezicni sajtovi</span>
-</div>
-</div>
-<div class="proizvod" id="proizvod-e5">
-<img alt="Senior Developer" src="assets/pic/Programer.jpg"/>
-<div class="text-holder">
-<span>Senior Developer</span>
-</div>
-</div>
-<div class="proizvod" id="proizvod-f6">
-<img alt="Hosting Services" src="assets/pic/Serveri.jpg"/>
-<div class="text-holder">
-<span>Hosting Services</span>
-</div>
-</div>
-<div class="proizvod" id="proizvod-g7">
-<img alt="ER Modeling NaviCat" src="assets/pic/Poslovni.jpg"/>
-<div class="text-holder">
-<span>ER Modeling NaviCat</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="page" id="karijera">
-<div class="column">
-<h2>Karijera</h2>
-<div class="career-columns">
-<div class="job-list">
-<label for="j1">Software arhitekta</label>
-<label for="j2">UX/UI dizajner</label>
-<label for="j3">Front-end Developer</label>
-<label for="j4">Back-end Developer</label>
-<label for="j5">DevOps Inzenjer</label>
-</div>
-<div class="job-descriptions">
-<input checked="" id="j1" name="job-item" type="radio" value="1"/>
-<div class="job-opis">
-<h3 style="font-weight: 700">Software arhitekta</h3>
-<p>Projektovanje kompletnog sistema od nule, uključujući bazu podataka, relacione veze i tokove podataka kroz aplikaciju.</p>
-<p>Izrada ER dijagrama, definisanje API strukture i arhitekture backend-a. Postavljanje tehničkih standarda, modularizacija sistema i izrada tehničke dokumentacije.</p>
-<p>Razrada bezbednosnih aspekata, performansi i skalabilnosti. Koordinacija sa front-end i back-end timovima u svim fazama razvoja.</p>
-<ul>
-<li>Projektovanje sistema logike</li>
-<li>Modelovanje baze podataka</li>
-<li>Definisanje API strukture</li>
-<li>Tehnička dokumentacija</li>
-<li>Koordinacija timova</li>
-</ul>
-<p>Velika plata, odlučuješ o svemu, tvoj glas je ključan, retko ko te menja, cenjen si.</p>
-</div>
-<input id="j2" name="job-item" type="radio" value="2"/>
-<div class="job-opis">
-<h3 style="font-weight: 700">UX/UI dizajner</h3>
-<p>Dizajniranje korisničkog iskustva i interfejsa sa akcentom na intuitivnu navigaciju, responzivnost i estetiku.</p>
-<p>Izrada wireframe-ova, prototipa i dizajn sistema u alatima poput Figma i Adobe XD.</p>
-<p>Kreiranje korisničkih tokova, testiranje prototipa i implementacija povratnih informacija u svrhu poboljšanja konverzije i zadovoljstva korisnika. Saradnja sa timovima u cilju tehničke izvedivosti dizajna.</p>
-<ul>
-<li>Izrada wireframe-ova</li>
-<li>Prototipiranje u Figmi</li>
-<li>Dizajn korisničkog toka</li>
-<li>Testiranje korisničkog iskustva</li>
-<li>Saradnja sa developerima</li>
-</ul>
-<p>Kreativan rad, brzi rezultati, vidljiv uticaj, opušten tempo, tražena profesija.</p>
-</div>
-<input id="j3" name="job-item" type="radio" value="3"/>
-<div class="job-opis">
-<h3 style="font-weight: 700">Front-end Developer</h3>
-<p> Implementacija dizajna u funkcionalne komponente koristeći HTML, CSS, JavaScript i moderne front-end frameworke (React, Vue).</p>
-<p>Povezivanje sa backend-om putem REST API-ja, prikaz i manipulacija podacima. </p>
-<p>Razvoj responzivnog i pristupačnog korisničkog interfejsa, optimizovanog za sve uređaje. Fokus na korisničku interakciju, SEO i performanse prikaza.</p>
-<ul>
-<li>Kodiranje HTML/CSS/JS</li>
-<li>Responsive dizajn</li>
-<li>Integracija sa API-jem</li>
-<li>Optimizacija prikaza</li>
-<li>UX poboljšanja</li>
-</ul>
-<p>Tražen svuda, brzo vidiš rezultate, dobar balans dizajna i koda, fleksibilan rad.</p>
-</div>
-<input id="j4" name="job-item" type="radio" value="4"/>
-<div class="job-opis">
-<h3 style="font-weight: 700">Back-end Developer</h3>
-<p>Izgradnja serverske logike, kreiranje i održavanje baza podataka, kao i razvoj i dokumentovanje API-ja.</p>
-<p>Upravljanje autentifikacijom korisnika, obradom podataka, sesijama i sigurnosnim aspektima aplikacije.</p>
-<p>Optimizacija SQL upita i razvoj skalabilne backend arhitekture. Integracija sa front-end-om i implementacija poslovnih pravila i logike.</p>
-<ul>
-<li>Razvoj serverske logike</li>
-<li>Upravljanje bazama podataka</li>
-<li>API implementacija</li>
-<li>Autentikacija korisnika</li>
-<li>Obrada podataka</li>
-</ul>
-<p>Visoka traženost, rad u pozadini bez klijenata, jaka plata, stabilan posao.</p>
-</div>
-<input id="j5" name="job-item" type="radio" value="5"/>
-<div class="job-opis">
-<h3 style="font-weight: 700">DevOps Inzenjer</h3>
-<p>Konfiguracija i održavanje serverske infrastrukture, uključujući deployment procesa, hosting okruženja i automatizaciju zadataka.</p>
-<p>Postavljanje i održavanje SSL sertifikata, CDN rešenja, monitoring sistema i bekap strategije.</p>
-<p>Upravljanje dostupnošću, performansama i bezbednošću platforme. Implementacija CI/CD tokova i rešavanje problema u realnom vremenu.</p>
-<ul>
-<li>Server konfiguracija</li>
-<li>Deployment automatizacija</li>
-<li>Monitoring sistema</li>
-<li>Backup i sigurnost</li>
-<li>CI/CD integracija</li>
-</ul>
-<p>Top pozicija za remote, velika zarada, mala konkurencija, sve ti prolazi kroz ruke.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="page">
-<div class="column" id="kontakt">
-<h2>Kontakt</h2>
-<div class="kontak-region">
-<div class="kontakt-adrese">
-<strong>Beograd</strong> <br/>
-                    Mirijevski Bulevar 4 <br/>
-                    11060, Palilula, Beograd <br/>
-                    Srbija <br/><br/>
-<strong>Sokobanja</strong> <br/>
-                    Alekse Markesica 32 <br/>
-                    18230, Sokobanja <br/>
-                    Srbija <br/><br/>
-<strong>Gornji Milanovac</strong> <br/>
-                    Takovska 2 <br/>
-                    32300, Gornji Milanovac <br/>
-                    Srbija
+    </div>
+
+    <div class="page" id="pocetna">
+        <div class="column">
+            <h1>Full-Stack Developer, UX/UI &amp; 3D Designer.</h1>
+            <div class="dark-box">
+                <p>I build meaningful digital experiences–from custom WordPress websites and modern web apps to immersive UX/UI designs and cinematic 3D visuals.</p>
+                <p>I don’t just build websites – I build experiences that leave a mark. With a sharp eye for design, solid full-stack dev skills, and a passion for storytelling through code and 3D visuals – I turn ideas into bold digital realities. Born in Belgrade. Creating for the world. I work solo. I work smart. I work like it’s personal – because it is. This isn’t just work. It’s my comeback. Let’s build something unforgettable.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="page" id="o-nama">
+        <div class="column">
+            <h2>About</h2> <br/><br/>
+            <p class="align-center" style="text-transform: uppercase"> Building the future with technologies that power the world.</p> <br/> <br/>
+            <div class="krugovi">
+                <div class="krug-holder">
+                    <div class="krug">11</div>
+                    <div class="oznaka">Employees</div>
                 </div>
-<div class="kontakt-mailovi">
-<strong>Podrška</strong> <br/>
-<a href="mailto:podrska@nooneneo.com">podrska@nooneneo.com</a> <br/>
-<strong>Prodaja</strong> <br/>
-<a href="mailto:prodaja@nooneneo.com">prodaja@nooneneo.com</a> <br/>
-<strong>Marketing</strong> <br/>
-<a href="mailto:marketing@noooneneo.com">marketing@noooneneo.com</a> <br/>
-<strong>Posao</strong> <br/>
-<a href="mailto:posao@noooneneo.com">posao@noooneneo.com</a>
+                <div class="krug-holder">
+                    <div class="krug">31</div>
+                    <div class="oznaka">Project</div>
+                </div>
+                <div class="krug-holder">
+                    <div class="krug">17</div>
+                    <div class="oznaka">Partner</div>
+                </div>
+            </div>
+            <p class="align-center"> Fueled by vision. Crafted by skill. I am NoOneNeo.</p>
+            <div class="technologies">
+                <div class="tehnologija">
+                    <img alt="HTML5" src="assets/pic/html.png"/>
+                    <p>HTML 5</p>
+                </div>
+                <div class="tehnologija">
+                    <img alt="CSS3" src="assets/pic/css.png"/>
+                    <p> CSS 3 </p>
+                </div>
+                <div class="tehnologija">
+                    <img alt="JavaScript" src="assets/pic/js.png"/>
+                    <p> JavaScript </p>
+                </div>
+                <div class="tehnologija">
+                    <img alt="Php" src="assets/pic/php.png"/>
+                    <p> Php </p>
+                </div>
+                <div class="tehnologija">
+                    <img alt="MySql" src="assets/pic/mysql.png"/>
+                    <p> MySQL </p>
+                </div>
+                <div class="tehnologija">
+                    <img alt="WordPress" src="assets/pic/wordpress.png"/>
+                    <p> WorPress </p>
+                </div>
+                <div class="tehnologija">
+                    <img alt="Autodesk" src="assets/pic/autodesk.png"/>
+                    <p> Autodesk </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="usluge">
+        <div class="column">
+            <h2>Services</h2> <br/> <br/>
+            <p class="align-center"> It Services that we provide.</p> <br/> <br/>
+            <div class="service-row">
+                <div>
+                    <img alt="UX/UI &amp; Front End Development" src="assets/pic/FrontEnd.jpg"/>
+                    <p>UX/UI &amp; Front End Development</p>
+                </div>
+                <div>
+                    <img alt="BackEnd Tech,Php &amp; MySQL" src="assets/pic/BackEnd.jpg"/>
+                    <p>BackEnd Tech, Php &amp; MySQL</p>
+                </div>
+                <div>
+                    <img alt="ull Stack Custom Development" src="assets/pic/FullStack.jpg"/>
+                    <p>Full Stack Custom Development</p>
+                </div>
+            </div>
+            <div class="service-row">
+                <div>
+                    <img alt="3D Design with Autodesk tools" src="assets/pic/3DDesign.jpg"/>
+                    <p>3D Design with Autodesk tools</p>
+                </div>
+                <div>
+                    <img alt="Our references NutriPlAin" src="assets/pic/NutriPlAIn.jpg"/>
+                    <a href="https:nutriplain.com">Our references NutriPlAin</a>
+                </div>
+                <div>
+                    <img alt="Our references AngelsTouch" src="assets/pic/AngelsTouch.jpg"/>
+                    <a href="https://AngelsTouch.rs">Our references AngelsTouch</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="page" id="proizvodi">
+    <div class="column">
+        <h2> Packages </h2>
+        <div class="matrica">
+            <div class="proizvod" id="proizvod-a1">
+                <img alt="Osnovni Paket Full Stack" src="assets/pic/Basic.jpg"/>
+                <div class="text-holder">
+                    <span>Basic Full Stack Package</span>
+                </div>
+            </div>
+            <div class="proizvod" id="proizvod-b2">
+                <img alt="Poslovni Paket Full Stack" src="assets/pic/Business.jpg"/>
+                <div class="text-holder">
+                    <span>Business Full Stack Package</span>
+                </div>
+            </div>
+            <div class="proizvod" id="proizvod-c3">
+                <img alt="Pro Paket Full Stack" src="assets/pic/Pro.jpg"/>
+                <div class="text-holder">
+                    <span>Pro Package</span>
+                </div>
+            </div>
+            <div class="proizvod" id="proizvod-d4">
+                <img alt="Visejezicni sajtovi" src="assets/pic/English.jpg"/>
+                <div class="text-holder">
+                    <span>Multilingual Websites</span>
+                </div>
+            </div>
+            <div class="proizvod" id="proizvod-e5">
+                <img alt="Senior Developer" src="assets/pic/Programer.jpg"/>
+                <div class="text-holder">
+                    <span>Senior Developer</span>
+                </div>
+            </div>
+            <div class="proizvod" id="proizvod-f6">
+                <img alt="Hosting Services" src="assets/pic/Serveri.jpg"/>
+                <div class="text-holder">
+                    <span>Hosting Services</span>
+                </div>
+            </div>
+            <div class="proizvod" id="proizvod-g7">
+                <img alt="ER Modeling NaviCat" src="assets/pic/poslovni.png"/>
+                <div class="text-holder">
+                    <span>ER Modeling NaviCat</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<iframe class="kontakt-mapa" height="450" src="https://www.openstreetmap.org/export/embed.html?bbox=20.517879724502567%2C44.8150584927793%2C20.521420240402225%2C44.81676711023849&amp;layer=mapnik&amp;marker=44.81591280783718%2C20.519649982452393" style="border: 3px solid #ededed" width="700"> </iframe>
-</div>
-</div>
-</div>
-<div class="footer">
-<div class="column">
-<div class="footer-column align-left">
-<strong>Beograd</strong> <br/>
-                Mirijevski Bulevar 4 <br/>
-                11060, Palilula, Beograd <br/>
-                Srbija <br/><br/>
-</div>
-<div class="footer-column align-center">
-<img alt="NoOneNeo Logo" src="assets/pic/NoOneNeo.jpg"/>
-</div>
-<div class="footer-column align-right">
-<a href="#o-nama">O NoOneNeo</a> <br/>
-<a href="#usluge">Usluge</a> <br/>
-<a href="#proizvodi">Proizvodi</a> <br/>
-<a href="#karijera">Karijera</a> <br/>
-</div>
-</div>
-</div>
+
+    <div class="page" id="karijera">
+        <div class="column">
+            <h2>Career</h2>
+            <div class="career-columns">
+                <div class="job-list">
+                    <label for="j1">Software Architect</label>
+                    <label for="j2">UX/UI Designer</label>
+                    <label for="j3">Front-end Developer</label>
+                    <label for="j4">Back-end Developer</label>
+                    <label for="j5">DevOps Engineer</label>
+                </div>
+                <div class="job-descriptions">
+                    <input checked="" id="j1" name="job-item" type="radio" value="1"/>
+                    <div class="job-opis">
+                        <h3 style="font-weight: 700">Software Architect</h3>
+                        <p>Designing a complete system from scratch, including database structure, relational connections, and data flow throughout the application.</p>
+                        <p>Creating ER diagrams, defining API structure and backend architecture. Establishing technical standards, system modularization, and preparing technical documentation.</p>
+                        <p>Elaborating security aspects, performance, and scalability. Coordinating with front-end and back-end teams throughout all development stages.</p>
+                        <ul>
+                            <li>System Logic Design</li>
+                            <li>Database Modeling</li>
+                            <li>Defining API Structure</li>
+                            <li>Technical Documentation</li>
+                            <li>Team Coordination</li>
+                        </ul>
+                        <p>High salary, you make all the key decisions, your voice matters, you’re rarely replaced, and you are highly respected.</p>
+                    </div>
+                    <input id="j2" name="job-item" type="radio" value="2"/>
+                    <div class="job-opis">
+                        <h3 style="font-weight: 700">UX/UI Designer</h3>
+                        <p>Designing user experience and interface with a focus on intuitive navigation, responsiveness, and visual aesthetics.</p>
+                        <p>Creating wireframes, prototypes, and design systems using tools like Figma and Adobe XD.</p>
+                        <p>Creating user flows, testing prototypes, and implementing feedback to improve conversion rates and user satisfaction. Collaborating with teams to ensure the technical feasibility of the design.</p>
+                        <ul>
+                            <li>Creating wireframes</li>
+                            <li>Prototyping in Figma</li>
+                            <li>User Flow Design</li>
+                            <li>User Experience Testing</li>
+                            <li>Collaboration with Developers</li>
+                        </ul>
+                        <p>Creative work, fast results, visible impact, relaxed pace, high-demand profession.</p>
+                    </div>
+                    <input id="j3" name="job-item" type="radio" value="3"/>
+                    <div class="job-opis">
+                        <h3 style="font-weight: 700">Front-end Developer</h3>
+                        <p>Implementing design into functional components using HTML, CSS, JavaScript, and modern front-end frameworks (React, Vue).</p>
+                        <p>Connecting with the backend via REST API, displaying and manipulating data.</p>
+                        <p>Developing a responsive and accessible user interface optimized for all devices, with a focus on user interaction, SEO, and display performance.</p>
+                        <ul>
+                            <li>HTML/CSS/JavaScript Coding</li>
+                            <li>Responsive Design</li>
+                            <li>API Integration</li>
+                            <li>Display Optimization</li>
+                            <li>UX Improvements</li>
+                        </ul>
+                        <p>In high demand everywhere, quick visible results, a good balance between design and code, flexible work.</p>
+                    </div>
+                    <input id="j4" name="job-item" type="radio" value="4"/>
+                    <div class="job-opis">
+                        <h3 style="font-weight: 700">Back-end Developer</h3>
+                        <p>Building server-side logic, creating and maintaining databases, as well as developing and documenting APIs.</p>
+                        <p>Managing user authentication, data processing, sessions, and application security aspects.</p>
+                        <p>SQL query optimization and scalable backend architecture development. Integration with the front-end and implementation of business rules and logic.</p>
+                        <ul>
+                            <li>Server-side Logic Development</li>
+                            <li>Database Management</li>
+                            <li>API Implementation</li>
+                            <li>User Authentication</li>
+                            <li>Data Processing</li>
+                        </ul>
+                        <p>High demand, behind-the-scenes work without clients, strong salary, stable job.</p>
+                    </div>
+                    <input id="j5" name="job-item" type="radio" value="5"/>
+                    <div class="job-opis">
+                        <h3 style="font-weight: 700">DevOps Engineer</h3>
+                        <p>Configuration and maintenance of server infrastructure, including deployment processes, hosting environments, and task automation.</p>
+                        <p>Setup and maintenance of SSL certificates, CDN solutions, monitoring systems, and backup strategies.</p>
+                        <p>Managing platform availability, performance, and security. Implementing CI/CD pipelines and resolving real-time issues.</p>
+                        <ul>
+                            <li>Server Configuration</li>
+                            <li>Deployment Automation</li>
+                            <li>System Monitoring</li>
+                            <li>Backup i sigurnost</li>
+                            <li>CI/CD Integration</li>
+                        </ul>
+                        <p>Top remote position, high salary, low competition, everything passes through your hands.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="column" id="kontakt">
+            <h2>Contact</h2>
+            <div class="kontak-region">
+                <div class="kontakt-adrese">
+                    <strong>Beograd</strong> <br/>
+                                        Mirijevski Bulevar 4 <br/>
+                                        11060, Palilula, Beograd <br/>
+                                        Srbija <br/><br/>
+                    <strong>Sokobanja</strong> <br/>
+                                        Alekse Markesica 32 <br/>
+                                        18230, Sokobanja <br/>
+                                        Srbija <br/><br/>
+                    <strong>Aranđelovac</strong> <br/>
+                                        Kneza Mihaila 110<br/>
+                                        34300, Aranđelovac <br/>
+                                        Srbija
+                </div>
+                <div class="kontakt-mailovi">
+                    <strong>Support</strong> <br/>
+                        <a href="mailto:podrska@nooneneo.com">info@nooneneo.com</a> <br/>
+                    <strong>Sales</strong> <br/>
+                        <a href="mailto:prodaja@nooneneo.com">nooneneo.vision@gmail.com</a> <br/>
+                    <strong>Marketing</strong> <br/>
+                        <a href="mailto:marketing@noooneneo.com">marketing@noooneneo.com</a> <br/>
+                    <strong>Job</strong> <br/>
+                        <a href="mailto:posao@noooneneo.com">posao@noooneneo.com</a>
+                </div>
+                <iframe class="kontakt-mapa" height="450" src="https://www.openstreetmap.org/export/embed.html?bbox=20.517879724502567%2C44.8150584927793%2C20.521420240402225%2C44.81676711023849&amp;layer=mapnik&amp;marker=44.81591280783718%2C20.519649982452393" style="border: 3px solid #ededed" width="700"> </iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="column">
+        <div class="footer-column align-left">
+            <strong>Beograd</strong> <br/>
+                            Mirijevski Bulevar 4 <br/>
+                            11060, Palilula, Beograd <br/>
+                            Srbija <br/><br/>
+        </div>
+        <div class="footer-column align-center">
+            <img alt="NoOneNeo Logo" src="assets/pic/NoOneNeo.jpg"/>
+        </div>
+        <div class="footer-column align-right">
+            <a href="#o-nama">About</a> <br/>
+            <a href="#usluge">Services</a> <br/>
+            <a href="#proizvodi">Packages</a> <br/>
+            <a href="#karijera">Career</a> <br/>
+        </div>
+        </div>
+    </div>
 </body>
 </html> 
